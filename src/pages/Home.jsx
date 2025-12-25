@@ -50,7 +50,7 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-4">
               <Link 
-                to="/services" 
+                to="/services/solar-energy" 
                 className="bg-secendcolor text-maincolor px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-white transition-all transform hover:-translate-y-1 shadow-lg"
               >
                 Our Services <ArrowRight className="w-5 h-5" />

@@ -15,7 +15,7 @@ const Carousel = () => {
       <div className="container mx-auto px-4 mb-12">
         <div className="flex flex-col items-center text-center" data-aos="fade-up">
           <h2 className="text-maincolor text-4xl md:text-5xl font-black mb-4">
-            Our Trusted <span className="text-secendcolor">Clients</span>
+            Our Trusted <span className="text-secendcolor">Suppliers & Partners</span>
           </h2>
           <div className="w-24 h-1.5 bg-red-800 rounded-full"></div>
           <p className="mt-4 text-gray-500 font-medium max-w-xl">
