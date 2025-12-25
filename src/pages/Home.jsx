@@ -146,7 +146,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-maincolor mb-4">Our Mission</h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  "TWe are building a clean energy future by providing smart, practicable, and reliable solar energy solutions bridging technology and sustainability and empowering every home and business to be self-reliant in generating it's own energy"
+                  "We are building a clean energy future by providing smart, practicable, and reliable solar energy solutions bridging technology and sustainability and empowering every home and business to be self-reliant in generating it's own energy"
                 </p>
               </div>
             </motion.div>
