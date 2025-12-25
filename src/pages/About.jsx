@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import { Target, Lightbulb, ShieldCheck, Award, Zap, Building2 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import ValuesSection from "../components/ValuesSection";
 const About = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      easing: "ease-out-back", // نوع الحركة (أكثر سلاسة)
+      easing: "ease-out-back", 
       once: true,
     });
   }, []);
@@ -69,8 +69,8 @@ const About = () => {
             </div>
             <h2 className="text-3xl font-extrabold text-maincolor">Our Vision</h2>
             <p className="text-gray-600 leading-relaxed text-lg">
-              To revolutionize the way energy is delivered across the region, 
-              setting new standards for the renewable energy industry.
+To be the first Egyptian brand to change people's view of renewable energy and make it part of daily life - not a luxury, but an investment in the future.
+
             </p>
           </div>
 
@@ -83,8 +83,7 @@ const About = () => {
             </div>
             <h2 className="text-3xl font-extrabold text-maincolor">Our Mission</h2>
             <p className="text-gray-600 leading-relaxed text-lg">
-              To provide a more affordable and sustainable alternative to electricity from utilities, 
-              empowering businesses with green technology.
+             We are building a clean energy future by providing smart, practicable, and reliable solar energy solutions bridging technology and sustainability and empowering every home and business to be self-reliant in generating it's own energy
             </p>
           </div>
         </div>
@@ -166,6 +165,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      <ValuesSection/>
     </div>
   );
 };

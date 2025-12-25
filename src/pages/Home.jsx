@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Target, Rocket, ShieldCheck, TrendingUp } from "lucide-react";
+import EssenceSection from '../components/EssenceSection'
 export default function Home() {
   const stats = [
     { label: "Founded", value: "2018", icon: ShieldCheck },
@@ -128,7 +129,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                 <p className="text-gray-300 leading-relaxed italic text-lg">
-                  "To revolutionize the way energy is delivered."
+                  "To be the first Egyptian brand to change people's view of renewable energy and make it part of daily life - not a luxury, but an investment in the future"
                 </p>
               </div>
             </motion.div>
@@ -145,7 +146,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-maincolor mb-4">Our Mission</h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  "To provide a more affordable and sustainable alternative to electricity from utilities."
+                  "TWe are building a clean energy future by providing smart, practicable, and reliable solar energy solutions bridging technology and sustainability and empowering every home and business to be self-reliant in generating it's own energy"
                 </p>
               </div>
             </motion.div>
@@ -155,7 +156,7 @@ export default function Home() {
       </div>
     </section>
 <ServicesSection/>
-
+<EssenceSection/>
     </div>
   );
 }
