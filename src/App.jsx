@@ -10,7 +10,27 @@ import EnergySavings from "./pages/Services/EnergySavings";
 import EnergyStorage from "./pages/Services/EnergyStorage";
 import SolarEnergy from "./pages/Services/SolarEnergy";
 import SmartBuildings from "./pages/Services/SmartBuildings";
+import { useEffect, useState } from "react";
+import Loading from './Loading'
 function App() {
+    const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // 3 ثواني
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className='w-screen h-screen flex justify-center items-center  '>
+
+    <Loading/>
+      </div>
+    );
+  }
   return (
     <Router>
       {/* نضع المكون هنا ليعمل عند كل انتقال */}
