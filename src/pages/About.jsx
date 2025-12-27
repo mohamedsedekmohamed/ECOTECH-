@@ -9,7 +9,7 @@ import taybahAcad from '../assets/project/Taybah Academy.jpg';
 import taybahInt from '../assets/project/Taybah International School.jpg';
 import nobughBoys from '../assets/project/Nobugh Boys School.jpg';
 import noboughAcad from '../assets/project/Nubough Academy.jpg';
-import alRashid from '../assets/project/Al-Rashid Private School.png';
+import alRashid from '../assets/project/Al-Rashid Private School.png';    
 import alOthman from '../assets/project/Al Othman Private School.jpeg';
 import alQudsInt from '../assets/project/Al-Quds International School.jpg';
 import jerusalemNursery from '../assets/project/Jerusalem Nursery.jpg';
@@ -34,31 +34,33 @@ const About = () => {
   
   const projects = [
     {
-      name: "Schools",
+      name: "educational institutions",
       icon: <Award />,
       images: [
-    { img: taybahAcad, title: "Taybah Academy - Solar Project" },
-      { img: taybahInt, title: "Taybah International School" },
-      { img: noboughAcad, title: "Nubough Academy" },
-      { img: nobughBoys, title: "Nobugh Boys School" },
-      { img: alOthman, title: "Al Othman Private School" },
-      { img: alQudsInt, title: "Al-Quds International School" },
-      { img: jerusalemNursery, title: " El QUDS Nursery" },
-      { img: jerusalemLang, title: "El QUDS School for Languages" },
-      { img: alexLife, title: "AlexLife Private School" },
-      { img: awalBitash, title: "Awal Al-Bitash School" },
-      { img: goldenSchool, title: "Golden School" },
-      { img: alRashid, title: "Al-Rashid Private School" },
-      { img: smartSchool, title: "Smart School" },
-      { img: zahraAwael, title: "Zahra Al-Awael Private School" },
-      { img: zahraMadaen, title: "Zahra Al-Madaen Private School" },
-      { img: brillianceGirls, title: "Brilliance Girls School" },
-      { img: brillianceLang, title: "Brilliance Language School" },
-      { img: cityInt, title: "City International School" }
-      ]
+   [
+  { img: taybahAcad, title: "Thebes Academy" },
+  { img: taybahInt, title: "Tiba International School" },
+  { img: noboughAcad, title: "Nobugh Academy" },
+  { img: nobughBoys, title: "Nobogh Private School (Boys)" },
+  { img: alOthman, title: "Al Othman Private School" },
+  { img: alQudsInt, title: "El Quds International Schools - QIS" },
+  { img: jerusalemNursery, title: "El QUDS Nursery" },
+  { img: jerusalemLang, title: "El Quds Language School" },
+  { img: alexLife, title: "Alex Life Language School" },
+  { img: awalBitash, title: "Aweal El Betash Private School" },
+  { img: goldenSchool, title: "Golden Language School" },
+  { img: alRashid, title: "El Rashid Language Schools" },
+  { img: smartSchool, title: "Smart International Schools" },
+  { img: zahraAwael, title: "Awael Private School" },
+  { img: zahraMadaen, title: "Zahret El-Madain Private School" },
+  { img: brillianceGirls, title: "Brilliance Girls School" },
+  { img: brillianceLang, title: "Brilliance Language School" },
+  { img: cityInt, title: "City International School" }
+]
+ ]
     },
     {
-      name: "Small Businesses",
+      name: "Residential projects ",
       icon: <Building2 />,
       images: [
         { img: villa1, title: "Private Villa Complex - Phase 1" },
@@ -69,19 +71,11 @@ const About = () => {
       name: "Large Facilities",
       icon: <Building2 />,
       images: [
+     
         { img: alexElec, title: "Alexandria Electricity Distribution Building" },
-        { img: cityInt, title: "City International Facility" },
-        { img: excellencePriv, title: "Excellence Private Campus" }
       ]
     },
-    {
-    name: "Private Institutions",
-    icon: <Zap />,
-  images: [
- 
-        { img: alexElec, title: "Alexandria Electricity Distribution Building" },
-      ]
-  }
+    
   ];
 
   const [selectedProject, setSelectedProject] = useState(null);

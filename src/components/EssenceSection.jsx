@@ -2,7 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiZap, FiGlobe, FiSmile } from "react-icons/fi";
 import OIP from "../assets/OIP.webp";
+import { useNavigate } from "react-router-dom";
 const EssenceSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative py-24 px-6 bg-slate-50 overflow-hidden">
       {/* خلفية نصية ضخمة باهتة لإعطاء لمسة عصرية */}
@@ -85,6 +87,7 @@ const EssenceSection = () => {
             {/* زر الأكشن (CTA) */}
             <motion.button 
               whileHover={{ scale: 1.05 }}
+              onClick={()=>navigate("/about")}
               whileTap={{ scale: 0.95 }}
               className="mt-12 px-10 py-5 bg-slate-900/40 text-white font-black rounded-2xl shadow-2xl hover:bg-[var(--color-maincolor)] transition-colors flex items-center gap-4 group"
             >
