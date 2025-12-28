@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import { FaRegSun } from "react-icons/fa6";
 import { RiProfileLine } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
-
+import sun from '../assets/sun.png';
 const Navbar = () => {
   const { t, i18n } = useTranslation();
 
@@ -43,8 +43,9 @@ const serviceLinks = [
       <div className="container mx-auto px-4">
         <div className="flex h-24 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 text-xl font-bold transition-colors hover:opacity-80">
-            <FaRegSun className="h-7 w-7 text-secendcolor" />
+          <Link to="/" className="flex items-center  text-xl font-bold transition-colors hover:opacity-80">
+            {/* <FaRegSun className="h-7 w-7 text-secendcolor" /> */}
+            <img src={sun} alt="Logo" className="h-21 w-21 text-secendcolor" />
          <span className="hidden sm:inline text-2xl lg:text-4xl text-maincolor font-extrabold">ECOTECH</span>
           </Link>
 
