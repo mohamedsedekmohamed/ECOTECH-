@@ -78,7 +78,6 @@ const SolarTypes = () => {
               {/* المحتوى */}
               <h3 className="text-2xl font-black text-maincolor mb-4 flex items-center gap-2">
                 {item.title}
-                <ArrowUpRight className="w-5 h-5 text-secendcolor opacity-0 group-hover:opacity-100 transition-all" />
               </h3>
               
               <p className="text-slate-600 leading-relaxed font-medium relative z-10">

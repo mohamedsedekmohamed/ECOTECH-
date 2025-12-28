@@ -72,7 +72,6 @@ const SmartBuildings = () => {
               Smart <span className="text-secendcolor">Buildings</span>
             </h1>
             <p className="text-xl text-gray-100 max-w-2xl mx-auto font-light leading-relaxed">
-              We integrate cutting-edge technology to make your buildings more <span className="font-bold">intelligent</span>, <span className="font-bold">secure</span>, and <span className="font-bold">energy-efficient</span>.
             </p>
           </motion.div>
         </div>
@@ -104,7 +103,6 @@ const SmartBuildings = () => {
                 <div className="relative z-10">
                   <h3 className="text-2xl font-black text-maincolor mb-4 flex items-center justify-between">
                     {service.title}
-                    <ArrowUpRight className="w-6 h-6 text-slate-300 group-hover:text-secendcolor transition-colors" />
                   </h3>
                   
                   <p className="text-slate-500 leading-relaxed text-sm">

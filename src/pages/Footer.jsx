@@ -109,13 +109,13 @@ const Footer = () => {
             © {new Date().getFullYear()} <span className="text-white font-black">ECOTECH</span>. All Rights Reserved.
           </div>
           <div className="flex gap-10">
-           {['home', 'about', 'contact'].map((link,index) => (
+           {[{tit:"home",link:"/"},{tit:"about",link:"/about"},{tit:"contact",link:"/contact",}].map((link,index) => (
   <Link
     key={index} 
-    to={link}
+    to={link.link}
     className="text-[10px] capitalize tracking-widest font-bold text-gray-500 hover:text-secendcolor transition-colors"
   >
-    {link}
+    {link.tit}
   </Link>
 ))}
           </div>

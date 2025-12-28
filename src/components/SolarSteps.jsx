@@ -63,9 +63,7 @@ const SolarSteps = () => {
             5 Simple Steps <br /> <span className="text-therrtcolor">To Go Solar</span>
           </motion.h2>
           <p className="text-slate-600 text-lg leading-relaxed font-medium">
-            We make it easy to switch. Our dedicated team handles everything from start to finish, 
-            guided by a <span className="text-maincolor font-bold">solar consultant engineer</span> every step of the way.
-          </p>
+           We make it easy to switch to solar. Our dedicated team will handle everything from start to finish. We’ll even assign a solar consultant engineer to your project who will guide you through the process and keep you informed about what’s happening every step of the way. It all begins with a quick consultation. </p>
         </div>
 
         {/* Steps Grid */}

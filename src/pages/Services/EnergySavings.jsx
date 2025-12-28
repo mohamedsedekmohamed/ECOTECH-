@@ -66,11 +66,7 @@ const EnergySavings = () => {
               <p className="text-blue-100/60 leading-relaxed text-sm italic">
                 "While others address current needs, we provide innovative solutions effective for years to come."
               </p>
-              <div className="mt-8 flex gap-2">
-                <div className="h-1 w-12 bg-secendcolor rounded-full"></div>
-                <div className="h-1 w-4 bg-white/20 rounded-full"></div>
-                <div className="h-1 w-4 bg-white/20 rounded-full"></div>
-              </div>
+             
             </motion.div>
           </div>
         </div>
@@ -80,38 +76,7 @@ const EnergySavings = () => {
       <section className="container mx-auto px-6 -mt-24 pb-24 relative z-20">
         
         {/* Quick Features Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
-  {features.map((item, idx) => (
-    <motion.div
-      key={idx}
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ delay: idx * 0.05 }}
-      whileHover={{ 
-        y: -8,
-        transition: { duration: 0.2 }
-      }}
-      className="group relative flex flex-col items-center justify-center p-8 bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-lg shadow-slate-200/50 border border-slate-100 hover:border-secendcolor/40 hover:bg-white transition-all duration-300"
-    >
-      {/* خلفية مخفية تظهر عند الحوم (Hover) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-secendcolor/5 to-transparent opacity-0 group-hover:opacity-100 rounded-[2rem] transition-opacity" />
-
-      {/* دائرة الأيقونة */}
-      <div className="relative mb-4 w-14 h-14 flex items-center justify-center rounded-2xl bg-slate-50 text-maincolor group-hover:bg-maincolor group-hover:text-white group-hover:rotate-[10deg] transition-all duration-500 shadow-inner">
-        {item.icon}
-      </div>
-
-      {/* النص */}
-      <span className="relative z-10 text-[11px] font-black text-maincolor/70 group-hover:text-maincolor uppercase tracking-[0.15em] text-center leading-tight">
-        {item.title}
-      </span>
-
-      {/* مؤشر سفلي صغير */}
-      <div className="absolute bottom-4 w-1 h-1 bg-secendcolor rounded-full opacity-0 group-hover:opacity-100 group-hover:scale-[3] transition-all duration-300" />
-    </motion.div>
-  ))}
-</div>
-
+   
         {/* Detailed Solutions */}
         <div className="grid lg:grid-cols-3 gap-8">
           {[
@@ -160,6 +125,38 @@ const EnergySavings = () => {
           ))}
         </div>
       </section>
+           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
+  {features.map((item, idx) => (
+    <motion.div
+      key={idx}
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ delay: idx * 0.05 }}
+      whileHover={{ 
+        y: -8,
+        transition: { duration: 0.2 }
+      }}
+      className="group relative flex flex-col items-center justify-center p-8 bg-white/80 backdrop-blur-sm rounded-[2rem] shadow-lg shadow-slate-200/50 border border-slate-100 hover:border-secendcolor/40 hover:bg-white transition-all duration-300"
+    >
+      {/* خلفية مخفية تظهر عند الحوم (Hover) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-secendcolor/5 to-transparent opacity-0 group-hover:opacity-100 rounded-[2rem] transition-opacity" />
+
+      {/* دائرة الأيقونة */}
+      <div className="relative mb-4 w-14 h-14 flex items-center justify-center rounded-2xl bg-slate-50 text-maincolor group-hover:bg-maincolor group-hover:text-white group-hover:rotate-[10deg] transition-all duration-500 shadow-inner">
+        {item.icon}
+      </div>
+
+      {/* النص */}
+      <span className="relative z-10 text-[11px] font-black text-maincolor/70 group-hover:text-maincolor uppercase tracking-[0.15em] text-center leading-tight">
+        {item.title}
+      </span>
+
+      {/* مؤشر سفلي صغير */}
+      <div className="absolute bottom-4 w-1 h-1 bg-secendcolor rounded-full opacity-0 group-hover:opacity-100 group-hover:scale-[3] transition-all duration-300" />
+    </motion.div>
+  ))}
+</div>
+
     </div>
   );
 };
