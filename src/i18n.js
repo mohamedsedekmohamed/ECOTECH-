@@ -15,10 +15,110 @@ i18n
           services: "Services",
           solarEnergy: "Solar Energy",
           smartBuilding: "Smart Buildings",
+          smartBuildingsnew: "Smart Buildings",
           energySaving: "Energy Savings",
+          energyStoragenew: "Energy Storage",
           energyStorag: "Energy Storage",
+          energySavingsnew: "Energy Storage",
+          "energyStorage": {
+    "hero": {
+      "badge": "Uninterrupted Power Solutions",
+      "titleMain": "Energy",
+      "titleHighlight": "Storage",
+      "description": "Power doesn’t have to stop when the sun goes down. Our <0>advanced storage solutions</0> ensure you have a reliable energy supply 24/7."
+    },
+    "batteries": {
+      "deepCycle": {
+        "title": "Deep-cycle Batteries",
+        "desc": "Designed for deep discharge cycles, perfect for consistent off-grid solar storage."
+      },
+      "green": {
+        "title": "Green Batteries",
+        "desc": "Environmentally friendly storage solutions with sustainable materials."
+      },
+      "liIon": {
+        "title": "Li-ion Batteries",
+        "desc": "High-density Lithium-ion tech for faster charging and longer life spans."
+      },
+      "mega": {
+        "title": "Mega Batteries",
+        "desc": "Large-scale energy storage systems for industrial and municipal projects."
+      }
+    },
+    "cta": {
+      "title": "Ready to Scale",
+      "highlight": "Up?",
+      "description": "Our engineers can calculate the exact storage capacity required for your industrial or residential facility.",
+      "button": "Get Technical Advice"
+    }
+  },
+            "smartBuildings": {
+    "hero": {
+      "badge": "Future of Living",
+      "titleMain": "Smart",
+      "titleHighlight": "Buildings"
+    },
+    "cta": {
+      "title": "Ready to transform your space?",
+      "desc": "Our experts tailor solutions to your specific architectural needs.",
+      "button": "Contact Experts"
+    },
+    "services": {
+      "automation": {
+        "title": "Building Automation",
+        "desc": "Complete control over lighting, HVAC, and building systems for maximum efficiency."
+      },
+      "security": {
+        "title": "Monitoring & Security",
+        "desc": "Advanced surveillance and security protocols to keep your premises safe 24/7."
+      },
+      "media": {
+        "title": "Media & Entertainments",
+        "desc": "Integrated audio-visual solutions for a seamless entertainment experience."
+      },
+      "networking": {
+        "title": "Networking",
+        "desc": "Robust and high-speed infrastructure for reliable connectivity across the facility."
+      },
+      "metering": {
+        "title": "Smart Metering",
+        "desc": "Precise energy tracking and smart metering to monitor consumption in real-time."
+      }
+    }
+  },
            "heroBadge": "Sustainable Energy Solutions",
-   
+      "solarSteps": {
+    "title": "5 Simple Steps",
+    "highlight": "To Go Solar",
+    "description": "We make it easy to switch to solar. Our dedicated team will handle everything from start to finish. We’ll even assign a solar consultant engineer to your project who will guide you through the process and keep you informed about what’s happening every step of the way. It all begins with a quick consultation.",
+    "cta": {
+      "title": "Ready to start your journey?",
+      "button": "Request a Free Consultation"
+    },
+    "steps": {
+      "consultation": {
+        "title": "CONSULTATION",
+        "desc": "We’ll take a look at your energy needs, and tell you how much you can save by going solar. Simple and free."
+      },
+      "design": {
+        "title": "DESIGN",
+        "desc": "We’ll visit your home to examine your roof and measurements. Our engineers will design a custom system to shrink your bills."
+      },
+      "paperwork": {
+        "title": "PAPERWORK",
+        "desc": "Your Account Manager handles all permits, paperwork, and financing. You just sit back and relax."
+      },
+      "installation": {
+        "title": "INSTALLATION",
+        "desc": "Panels up and ready in about 48 hours. Once finished, we’ll show you how to manage your new system."
+      },
+      "activation": {
+        "title": "ACTIVATION",
+        "desc": "Once the utility gives approval, you can start generating your own clean, renewable energy."
+      },
+    
+    }
+  },
            "energySavings": {
     "badge": "Sustainable Efficiency",
     "heroTitle": "Energy",
@@ -244,6 +344,26 @@ i18n
       { "title": "contact", "path": "/contact" }
     ]
   },
+   "solarTypes": {
+    "badge": "Sustainable Solutions",
+    "titleMain": "3 TYPES OF",
+    "titleHighlight": "SOLAR SYSTEMS",
+    "footerNote": "💡 Solar power is clean, renewable, and very available, making it an attractive choice for everyone.",
+    "systems": {
+      "onGrid": {
+        "title": "On-Grid Solar System",
+        "description": "Allowing you to feed unused solar energy directly into the power grid, where you will receive financial incentive from the electricity company."
+      },
+      "offGrid": {
+        "title": "Off-Grid Solar System",
+        "description": "Stand-alone solar power systems are incredibly useful in areas with limited (or completely unavailable) utilities."
+      },
+      "hybrid": {
+        "title": "Hybrid Solar System",
+        "description": "The best of both worlds by building a solar system that only uses traditional utility power as a backup. Rather than funneling excess energy back, you store it."
+      }
+    }
+  },
   "about": {
      "projects": {
       "educational": "Educational Institutions",
@@ -370,125 +490,12 @@ i18n
       }
 
     },
-    "solarTypes": {
-    "badge": "Sustainable Solutions",
-    "titleMain": "3 TYPES OF",
-    "titleHighlight": "SOLAR SYSTEMS",
-    "footerNote": "💡 Solar power is clean, renewable, and very available, making it an attractive choice for everyone.",
-    "systems": {
-      "onGrid": {
-        "title": "On-Grid Solar System",
-        "description": "Allowing you to feed unused solar energy directly into the power grid, where you will receive financial incentive from the electricity company."
-      },
-      "offGrid": {
-        "title": "Off-Grid Solar System",
-        "description": "Stand-alone solar power systems are incredibly useful in areas with limited (or completely unavailable) utilities."
-      },
-      "hybrid": {
-        "title": "Hybrid Solar System",
-        "description": "The best of both worlds by building a solar system that only uses traditional utility power as a backup. Rather than funneling excess energy back, you store it."
-      }
-    }
+   
+
+
+ 
   }
-,
-"energyStorage": {
-    "hero": {
-      "badge": "Uninterrupted Power Solutions",
-      "titleMain": "Energy",
-      "titleHighlight": "Storage",
-      "description": "Power doesn’t have to stop when the sun goes down. Our <0>advanced storage solutions</0> ensure you have a reliable energy supply 24/7."
-    },
-    "batteries": {
-      "deepCycle": {
-        "title": "Deep-cycle Batteries",
-        "desc": "Designed for deep discharge cycles, perfect for consistent off-grid solar storage."
-      },
-      "green": {
-        "title": "Green Batteries",
-        "desc": "Environmentally friendly storage solutions with sustainable materials."
-      },
-      "liIon": {
-        "title": "Li-ion Batteries",
-        "desc": "High-density Lithium-ion tech for faster charging and longer life spans."
-      },
-      "mega": {
-        "title": "Mega Batteries",
-        "desc": "Large-scale energy storage systems for industrial and municipal projects."
-      }
-    },
-    "cta": {
-      "title": "Ready to Scale",
-      "highlight": "Up?",
-      "description": "Our engineers can calculate the exact storage capacity required for your industrial or residential facility.",
-      "button": "Get Technical Advice"
-    }
-  },
-    "solarSteps": {
-    "title": "5 Simple Steps",
-    "highlight": "To Go Solar",
-    "description": "We make it easy to switch to solar. Our dedicated team will handle everything from start to finish. We’ll even assign a solar consultant engineer to your project who will guide you through the process and keep you informed about what’s happening every step of the way. It all begins with a quick consultation.",
-    "cta": {
-      "title": "Ready to start your journey?",
-      "button": "Request a Free Consultation"
-    },
-    "steps": {
-      "consultation": {
-        "title": "CONSULTATION",
-        "desc": "We’ll take a look at your energy needs, and tell you how much you can save by going solar. Simple and free."
-      },
-      "design": {
-        "title": "DESIGN",
-        "desc": "We’ll visit your home to examine your roof and measurements. Our engineers will design a custom system to shrink your bills."
-      },
-      "paperwork": {
-        "title": "PAPERWORK",
-        "desc": "Your Account Manager handles all permits, paperwork, and financing. You just sit back and relax."
-      },
-      "installation": {
-        "title": "INSTALLATION",
-        "desc": "Panels up and ready in about 48 hours. Once finished, we’ll show you how to manage your new system."
-      },
-      "activation": {
-        "title": "ACTIVATION",
-        "desc": "Once the utility gives approval, you can start generating your own clean, renewable energy."
-      },
-      "smartBuildings": {
-    "hero": {
-      "badge": "Future of Living",
-      "titleMain": "Smart",
-      "titleHighlight": "Buildings"
-    },
-    "cta": {
-      "title": "Ready to transform your space?",
-      "desc": "Our experts tailor solutions to your specific architectural needs.",
-      "button": "Contact Experts"
-    },
-    "services": {
-      "automation": {
-        "title": "Building Automation",
-        "desc": "Complete control over lighting, HVAC, and building systems for maximum efficiency."
-      },
-      "security": {
-        "title": "Monitoring & Security",
-        "desc": "Advanced surveillance and security protocols to keep your premises safe 24/7."
-      },
-      "media": {
-        "title": "Media & Entertainments",
-        "desc": "Integrated audio-visual solutions for a seamless entertainment experience."
-      },
-      "networking": {
-        "title": "Networking",
-        "desc": "Robust and high-speed infrastructure for reliable connectivity across the facility."
-      },
-      "metering": {
-        "title": "Smart Metering",
-        "desc": "Precise energy tracking and smart metering to monitor consumption in real-time."
-      }
-    }
-  }
-    }
-  }
-  }
+  
         }
       },
       ar: {
@@ -499,9 +506,12 @@ i18n
           contacts: "تواصل معنا",
           services: "خدماتنا",
           solarEnergy: "الطاقة الشمسية",
+          smartBuildingsnew: "المباني الذكية",
           smartBuilding: "المباني الذكية",
           energySaving: "توفير الطاقة",
+          energySavingsnew: "توفير الطاقة",
           energyStorag: "تخزين الطاقة",
+          energyStoragenew: "تخزين الطاقة",
           "energySavings": {
     "badge": "كفاءة مستدامة",
     "heroTitle": "توفير",

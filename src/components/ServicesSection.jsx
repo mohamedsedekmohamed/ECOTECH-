@@ -27,7 +27,7 @@ const ServicesSection = () => {
       path: "/services/solar-energy",
     },
     {
-      title: t("smartBuildings"),
+      title: t("smartBuildingsnew"),
       icon: <Building className="w-8 h-8 text-blue-500" />,
       items: [
         t("smartItems.automation"),
@@ -40,7 +40,7 @@ const ServicesSection = () => {
       path: "/services/smart-buildings",
     },
     {
-      title: t("energySavings"),
+      title: t("energySavingsnew"),
       icon: <Leaf className="w-8 h-8 text-green-500" />,
       items: [
         t("savingItems.management"),
@@ -53,7 +53,7 @@ const ServicesSection = () => {
       path: "/services/energy-savings",
     },
     {
-      title: t("energyStorage"),
+      title: t("energyStoragenew"),
       icon: <BatteryCharging className="w-8 h-8 text-red-500" />,
       items: [
         t("storageItems.deep"),
@@ -68,9 +68,9 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-maincolor">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-black text-center text-[#004a99] mb-16">
+        <h2 className="text-4xl font-black text-center text-white mb-16">
           {t("servicesTitle")}
         </h2>
 

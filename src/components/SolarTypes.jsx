@@ -33,7 +33,7 @@ const SolarTypes = () => {
 
   return (
     <section 
-      className="py-24 bg-slate-50 overflow-hidden" 
+      className="py-24 bg-maincolor overflow-hidden" 
       dir={isRTL ? "rtl" : "ltr"}
     >
       <div className="container mx-auto px-6">
@@ -43,14 +43,14 @@ const SolarTypes = () => {
           <motion.span 
             initial={{ opacity: 0, tracking: "0.1em" }}
             whileInView={{ opacity: 1, tracking: "0.3em" }}
-            className="text-maincolor font-bold uppercase text-sm block"
+            className="text-white font-bold uppercase text-sm block"
           >
             {t("solarTypes.badge")}
           </motion.span>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-black text-maincolor mt-4 mb-6"
+            className="text-4xl md:text-5xl font-black text-white mt-4 mb-6"
           >
             {t("solarTypes.titleMain")} <span className="text-therrtcolor">{t("solarTypes.titleHighlight")}</span>
           </motion.h2>
@@ -67,7 +67,7 @@ const SolarTypes = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
               whileHover={{ y: -10 }}
-              className="relative group bg-white rounded-[2.5rem] p-10 shadow-xl shadow-maincolor/5 border border-slate-100 overflow-hidden"
+              className="relative group bg-white rounded-[2.5rem] p-10 shadow-xl shadow-white/5 border border-slate-100 overflow-hidden"
             >
               {/* رقم الخلفية التزييني - تعديل الموضع حسب اللغة */}
               <span className={`absolute -top-4 ${isRTL ? "-left-2" : "-right-2"} text-9xl font-black text-slate-50 group-hover:text-slate-100 transition-colors pointer-events-none`}>
@@ -104,9 +104,9 @@ const SolarTypes = () => {
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="mt-16 text-center p-8 bg-maincolor/5 rounded-3xl border border-maincolor/10"
+          className="mt-16 text-center p-8 bg-white/5 rounded-3xl border border-white/10"
         >
-          <p className="text-maincolor font-bold">
+          <p className="text-white font-bold">
             {t("solarTypes.footerNote")}
           </p>
         </motion.div>

@@ -69,9 +69,9 @@ const EssenceSection = () => {
                   {i < arr.length - 1 && <span className="text-[var(--color-maincolor)]">{t("essence.highlightMain")}</span>}
                 </>
               ))}
-              {t("essence.headline").includes(t("essence.highlightSecondary")) && (
+              {/* {t("essence.headline").includes(t("essence.highlightSecondary")) && (
                 <span className="text-[var(--color-secendcolor)]">{t("essence.highlightSecondary")}</span>
-              )}
+              )} */}
             </h2>
 
             <div className="space-y-8">
