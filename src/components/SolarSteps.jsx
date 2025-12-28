@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { 
   MessagesSquare, 
   Ruler, 
@@ -9,66 +10,72 @@ import {
   CheckCircle2 
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+
 const SolarSteps = () => {
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const isRTL = i18n.language === "ar";
+
   const steps = [
     {
       id: 1,
-      title: "CONSULTATION",
-      desc: "We’ll take a look at your energy needs, and tell you how much you can save by going solar. Simple and free.",
+      title: t("solarSteps.steps.consultation.title"),
+      desc: t("solarSteps.steps.consultation.desc"),
       icon: <MessagesSquare />,
       color: "var(--color-maincolor)"
     },
     {
       id: 2,
-      title: "DESIGN",
-      desc: "We’ll visit your home to examine your roof and measurements. Our engineers will design a custom system to shrink your bills.",
+      title: t("solarSteps.steps.design.title"),
+      desc: t("solarSteps.steps.design.desc"),
       icon: <Ruler />,
       color: "var(--color-secendcolor)"
     },
     {
       id: 3,
-      title: "PAPERWORK",
-      desc: "Your Account Manager handles all permits, paperwork, and financing. You just sit back and relax.",
+      title: t("solarSteps.steps.paperwork.title"),
+      desc: t("solarSteps.steps.paperwork.desc"),
       icon: <FileText />,
       color: "var(--color-therrtcolor)"
     },
     {
       id: 4,
-      title: "INSTALLATION",
-      desc: "Panels up and ready in about 48 hours. Once finished, we’ll show you how to manage your new system.",
+      title: t("solarSteps.steps.installation.title"),
+      desc: t("solarSteps.steps.installation.desc"),
       icon: <Construction />,
       color: "var(--color-maincolor)"
     },
     {
       id: 5,
-      title: "ACTIVATION",
-      desc: "Once the utility gives approval, you can start generating your own clean, renewable energy.",
+      title: t("solarSteps.steps.activation.title"),
+      desc: t("solarSteps.steps.activation.desc"),
       icon: <Zap />,
       color: "var(--color-secendcolor)"
     }
   ];
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-24 bg-white overflow-hidden" dir={isRTL ? "rtl" : "ltr"}>
       <div className="container mx-auto px-6">
         
         {/* Header */}
-        <div className="max-w-3xl mb-20">
+        <div className={`max-w-3xl mb-20 ${isRTL ? "text-right" : "text-left"}`}>
           <motion.h2 
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: isRTL ? 50 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             className="text-4xl md:text-6xl font-black text-maincolor mb-6 uppercase tracking-tighter"
           >
-            5 Simple Steps <br /> <span className="text-therrtcolor">To Go Solar</span>
+            {t("solarSteps.title")} <br /> 
+            <span className="text-therrtcolor">{t("solarSteps.highlight")}</span>
           </motion.h2>
           <p className="text-slate-600 text-lg leading-relaxed font-medium">
-           We make it easy to switch to solar. Our dedicated team will handle everything from start to finish. We’ll even assign a solar consultant engineer to your project who will guide you through the process and keep you informed about what’s happening every step of the way. It all begins with a quick consultation. </p>
+            {t("solarSteps.description")}
+          </p>
         </div>
 
         {/* Steps Grid */}
         <div className="relative">
-          {/* الخط الواصل بين الخطوات (للدسكتوب) */}
+          {/* الخط الواصل - Desktop */}
           <div className="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-slate-100 -translate-y-1/2 z-0" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
@@ -89,7 +96,7 @@ const SolarSteps = () => {
                     className="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg relative"
                   >
                     {step.icon}
-                    <span className="absolute -top-3 -right-3 w-8 h-8 bg-white border-4 border-slate-50 rounded-full flex items-center justify-center text-maincolor font-black text-xs">
+                    <span className={`absolute -top-3 ${isRTL ? "-left-3" : "-right-3"} w-8 h-8 bg-white border-4 border-slate-50 rounded-full flex items-center justify-center text-maincolor font-black text-xs`}>
                       {step.id}
                     </span>
                   </div>
@@ -102,10 +109,7 @@ const SolarSteps = () => {
                     {step.desc}
                   </p>
 
-                  {/* علامة اكتمال الخطوة تظهر عند الـ Hover */}
-                  <motion.div 
-                    className="mt-6 text-therrtcolor opacity-0 group-hover:opacity-100 transition-opacity"
-                  >
+                  <motion.div className="mt-6 text-therrtcolor opacity-0 group-hover:opacity-100 transition-opacity">
                     <CheckCircle2 size={24} />
                   </motion.div>
                 </div>
@@ -114,16 +118,19 @@ const SolarSteps = () => {
           </div>
         </div>
 
-        {/* Call to Action Footer */}
+        {/* Call to Action */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           className="mt-20 bg-maincolor p-10 rounded-[3rem] text-center text-white relative overflow-hidden group"
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-secendcolor/10 rounded-full -mr-20 -mt-20 blur-3xl group-hover:bg-secendcolor/20 transition-all" />
-          <h4 className="text-2xl font-bold mb-4 relative z-10">Ready to start your journey?</h4>
-          <button onClick={()=>navigate("/contact")} className="bg-secendcolor text-maincolor px-10 py-4 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-transform relative z-10 shadow-lg">
-            Request a Free Consultation
+          <div className={`absolute top-0 ${isRTL ? "left-0" : "right-0"} w-64 h-64 bg-secendcolor/10 rounded-full ${isRTL ? "-ml-20" : "-mr-20"} -mt-20 blur-3xl group-hover:bg-secendcolor/20 transition-all`} />
+          <h4 className="text-2xl font-bold mb-4 relative z-10">{t("solarSteps.cta.title")}</h4>
+          <button 
+            onClick={() => navigate("/contact")} 
+            className="bg-secendcolor text-maincolor px-10 py-4 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-transform relative z-10 shadow-lg"
+          >
+            {t("solarSteps.cta.button")}
           </button>
         </motion.div>
       </div>

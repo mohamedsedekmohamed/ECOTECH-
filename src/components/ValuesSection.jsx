@@ -1,41 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FiCpu, FiLayout, FiShield , FiZap } from "react-icons/fi";
+import { FiCpu, FiLayout, FiShield, FiZap } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
 
 const values = [
-  {
-    title: "Innovation",
-    desc: "Continuous development and the truly intelligent use of technology, not just superficially.",
-    icon: <FiCpu />,
-    color: "var(--color-maincolor)",
-  },
-  {
-    title: "Simplicity",
-    desc: "Making solar energy easy and understandable for everyone.",
-    icon: <FiLayout />,
-    color: "var(--color-secendcolor)",
-  },
-  {
-    title: "Trust",
-    desc: "High-quality implementation and transparent dealings.",
-    icon: <FiShield />,
-    color: "var(--color-maincolor)",
-  },
-  {
-    title: "Sustainability",
-    desc: "Our goal is a cleaner environment and a longer life.",
-    icon: <FiCpu />,
-    color: "var(--color-therrtcolor)",
-  },
-  {
-    title: "Connection",
-    desc: "Connecting people, technology, and nature in a balanced relationship.",
-    icon: <FiZap />,
-    color: "var(--color-secendcolor)",
-  },
+  { key: "innovation", icon: <FiCpu />, color: "var(--color-maincolor)" },
+  { key: "simplicity", icon: <FiLayout />, color: "var(--color-secendcolor)" },
+  { key: "trust", icon: <FiShield />, color: "var(--color-maincolor)" },
+  { key: "sustainability", icon: <FiCpu />, color: "var(--color-therrtcolor)" },
+  { key: "connection", icon: <FiZap />, color: "var(--color-secendcolor)" },
 ];
 
 const ValuesSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24 px-6 bg-white relative overflow-hidden">
       {/* عناصر خلفية تجميلية */}
@@ -50,14 +28,14 @@ const ValuesSection = () => {
             whileInView={{ opacity: 1 }}
             className="text-[var(--color-maincolor)] font-bold tracking-[0.3em] uppercase text-sm mb-4"
           >
-            Our Core Principles
+            {t("valuesSection.header.subtitle")}
           </motion.h4>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter"
           >
-            Values That Drive <span className="text-[var(--color-therrtcolor)]">Change</span>
+            {t("valuesSection.header.title")}
           </motion.h2>
         </div>
 
@@ -82,10 +60,10 @@ const ValuesSection = () => {
 
               {/* Title & Desc */}
               <h3 className="text-2xl font-bold text-slate-800 mb-4 tracking-tight">
-                {val.title}
+                {t(`valuesSection.values.${val.key}.title`)}
               </h3>
               <p className="text-slate-500 leading-relaxed font-medium">
-                {val.desc}
+                {t(`valuesSection.values.${val.key}.desc`)}
               </p>
 
               {/* Decorative Line */}

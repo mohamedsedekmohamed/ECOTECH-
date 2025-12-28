@@ -5,26 +5,31 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaRegSun } from "react-icons/fa6";
 import { RiProfileLine } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
+
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false); // للحوائم المنسدلة
   const location = useLocation();
 
   
-  const serviceLinks = [
-    { path: "/services/solar-energy", label: "Solar Energy", icon: Sun },
-    { path: "/services/smart-buildings", label: "Smart Buildings", icon: Building },
-    { path: "/services/energy-savings", label: "Energy Savings", icon: Leaf },
-    { path: "/services/energy-storage", label: "Energy Storage", icon: BatteryCharging },
-  ];
+const serviceLinks = [
+  { path: "/services/solar-energy", label: t("solarEnergy"), icon: Sun },
+  { path: "/services/smart-buildings", label: t("smartBuilding"), icon: Building },
+  { path: "/services/energy-savings", label: t("energySaving"), icon: Leaf },
+  { path: "/services/energy-storage", label: t("energyStorag"), icon: BatteryCharging },
+];
 
-  const navItems = [
-    { path: "/", label: "home", icon: Home },
-    { path: "/about", label: "about", icon: Info },
-    { path: "/careers", label: "Careers", icon: RiProfileLine },
-    { path: "/contact", label: "contact", icon: Mail },
-  ];
+
+ const navItems = [
+  { path: "/", label: t("home"), icon: Home },
+  { path: "/about", label: t("Aboutt"), icon: Info },
+  { path: "/careers", label: t("careerss"), icon: RiProfileLine },
+  { path: "/contact", label: t("contacts"), icon: Mail },
+];
+
 
   const isActive = (path) => location.pathname === path;
   const isServiceActive = serviceLinks.some(link => location.pathname === link.path);
@@ -66,7 +71,7 @@ const Navbar = () => {
                 }`}
               >
                 <Briefcase className="h-4 w-4" />
-                services
+                {t("services")}
                 <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
               </button>
 
@@ -96,15 +101,24 @@ const Navbar = () => {
                 }`}
               >
                 <Mail className="h-4 w-4" />
-                contact
+                {t("contacts")}
               </Link>
             </li>
           </ul>
 
           {/* Language & Mobile Toggle */}
           <div className="flex items-center gap-2">
-            <button className="flex items-center gap-2 rounded-md border border-maincolor/20 px-3 py-2 text-sm font-medium text-maincolor hover:bg-secendcolor transition-all">
-              <Globe className="h-4 w-4" /> EN
+            <button
+             onClick={() => {
+    const lang = i18n.language === "en" ? "ar" : "en";
+    i18n.changeLanguage(lang);
+      localStorage.setItem("lang", lang); 
+
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  }}
+            className="flex items-center gap-2 rounded-md border border-maincolor/20 px-3 py-2 text-sm font-medium text-maincolor hover:bg-secendcolor transition-all">
+              <Globe className="h-4 w-4" />   {i18n.language.toUpperCase()}
+
             </button>
             <button onClick={() => setIsOpen(!isOpen)} className="rounded-md p-2 hover:bg-secendcolor/20 md:hidden">
               {isOpen ? <X className="h-6 w-6 text-maincolor" /> : <Menu className="h-6 w-6 text-maincolor" />}
@@ -116,13 +130,13 @@ const Navbar = () => {
         <div className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${isOpen ? "max-h-[500px] pb-4" : "max-h-0"}`}>
           <ul className="flex flex-col gap-1">
             <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 px-4 py-3 text-maincolor font-semibold">
-                <Home className="h-5 w-5" /> Home
+                <Home className="h-5 w-5" /> {t("Home")}
             </Link>
             <Link to="/about" onClick={() => setIsOpen(false)} className="flex items-center gap-3 px-4 py-3 text-maincolor font-semibold">
-                <Info className="h-5 w-5" /> About
+                <Info className="h-5 w-5" /> {t("Aboutt")}
             </Link>
             <Link to="/careers" onClick={() => setIsOpen(false)} className="flex items-center gap-3 px-4 py-3 text-maincolor font-semibold">
-                <Info className="h-5 w-5" /> Careers
+                <Info className="h-5 w-5" /> {t("Careers")}
             </Link>
             
             {/* Services Mobile Accordion */}
@@ -131,7 +145,7 @@ const Navbar = () => {
                   onClick={() => setServicesOpen(!servicesOpen)}
                   className="flex w-full items-center justify-between px-4 py-3 text-maincolor font-semibold"
                 >
-                    <div className="flex items-center gap-3"><Briefcase className="h-5 w-5" /> Services</div>
+                    <div className="flex items-center gap-3"><Briefcase className="h-5 w-5" /> {t("Services")}</div>
                     <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
                 </button>
                 {servicesOpen && (
@@ -151,7 +165,7 @@ const Navbar = () => {
             </div>
 
             <Link to="/contact" onClick={() => setIsOpen(false)} className="flex items-center gap-3 px-4 py-3 text-maincolor font-semibold">
-                <Mail className="h-5 w-5" /> Contact
+                <Mail className="h-5 w-5" /> {t("contacts")}
             </Link>
           </ul>
         </div>
