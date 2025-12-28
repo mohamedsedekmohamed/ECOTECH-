@@ -4,6 +4,7 @@ import { Home, Info, Briefcase, Mail, Menu, X, Globe, ChevronDown, Sun, Building
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaRegSun } from "react-icons/fa6";
+import { RiProfileLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ const Navbar = () => {
   const navItems = [
     { path: "/", label: "home", icon: Home },
     { path: "/about", label: "about", icon: Info },
-    { path: "/careers", label: "Careers", icon: Info },
+    { path: "/careers", label: "Careers", icon: RiProfileLine },
     { path: "/contact", label: "contact", icon: Mail },
   ];
 
@@ -39,7 +40,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 text-xl font-bold transition-colors hover:opacity-80">
             <FaRegSun className="h-7 w-7 text-secendcolor" />
-            <span className="hidden sm:inline text-2xl lg:text-4xl text-maincolor font-extrabold">ECOTECH</span>
+         <span className="hidden sm:inline text-2xl lg:text-4xl text-maincolor font-extrabold">ECOTECH</span>
           </Link>
 
           <ul className="hidden items-center gap-5 md:flex">
@@ -119,6 +120,9 @@ const Navbar = () => {
             </Link>
             <Link to="/about" onClick={() => setIsOpen(false)} className="flex items-center gap-3 px-4 py-3 text-maincolor font-semibold">
                 <Info className="h-5 w-5" /> About
+            </Link>
+            <Link to="/careers" onClick={() => setIsOpen(false)} className="flex items-center gap-3 px-4 py-3 text-maincolor font-semibold">
+                <Info className="h-5 w-5" /> Careers
             </Link>
             
             {/* Services Mobile Accordion */}

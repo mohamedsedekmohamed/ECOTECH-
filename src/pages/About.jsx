@@ -34,11 +34,10 @@ const About = () => {
   
   const projects = [
     {
-      name: "educational institutions",
+      name: "Educational Institutions",
       icon: <Award />,
       images: [
-   [
-  { img: taybahAcad, title: "Thebes Academy" },
+    { img: taybahAcad, title: "Thebes Academy" },
   { img: taybahInt, title: "Tiba International School" },
   { img: noboughAcad, title: "Nobugh Academy" },
   { img: nobughBoys, title: "Nobogh Private School (Boys)" },
@@ -55,8 +54,8 @@ const About = () => {
   { img: zahraMadaen, title: "Zahret El-Madain Private School" },
   { img: brillianceGirls, title: "Brilliance Girls School" },
   { img: brillianceLang, title: "Brilliance Language School" },
-  { img: cityInt, title: "City International School" }
-]
+  { img: cityInt, title: "City International School" },
+  { img: excellencePriv, title: "Excellence Private School" },
  ]
     },
     {
@@ -150,7 +149,82 @@ const About = () => {
           </div>
         </div>
       </section>
+      {/*  */}
+{/* New Design: Authorization & Expertise Section */}
+<section className="py-24 relative overflow-hidden bg-white">
+  {/* عناصر ديكورية في الخلفية */}
+  <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
+    <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-maincolor"></div>
+    <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-secendcolor"></div>
+  </div>
 
+  <div className="container mx-auto px-4 relative z-10">
+    <div className="max-w-6xl mx-auto">
+      
+      {/* الجزء العلوي: اعتماد الوزارة */}
+      <div 
+        className="bg-gray-50 border border-gray-100 rounded-[2rem] p-8 md:p-12 mb-12 shadow-sm relative overflow-hidden"
+        data-aos="fade-up"
+      >
+        <div className="absolute top-0 right-0 p-4 opacity-10">
+           <Building2 size={150} className="text-maincolor" />
+        </div>
+        
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="flex-shrink-0">
+            <div className="w-24 h-24 bg-white rounded-2xl shadow-xl flex items-center justify-center border-b-4 border-secendcolor">
+              <Award className="text-maincolor w-12 h-12" />
+            </div>
+          </div>
+          <div className="text-center md:text-left">
+            <span className="text-secendcolor font-bold tracking-[0.2em] uppercase text-sm mb-2 block">Official Certification</span>
+            <h2 className="text-2xl md:text-4xl font-black text-maincolor mb-4 leading-tight">
+              Authorized by the Egyptian Ministry of Electricity and Renewable Energy
+            </h2>
+            <p className="text-gray-600 text-lg max-w-4xl leading-relaxed">
+              We are officially licensed for the <span className="text-maincolor font-bold underline decoration-secendcolor decoration-2 underline-offset-4">supply, installation, operation, and maintenance</span> of solar PV systems, ensuring full compliance with the public grid standards.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* الجزء السفلي: الخبرة التجارية (بطاقات صغيرة) */}
+      <div className="grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="200">
+        
+        {/* بطاقة الخبرة */}
+        <div className="group bg-maincolor p-10 rounded-[2rem] text-white shadow-2xl hover:scale-[1.02] transition-transform duration-500">
+          <div className="flex items-start gap-6">
+            <div className="p-4 bg-white/10 rounded-xl group-hover:bg-secendcolor transition-colors">
+              <Zap className="text-white" size={30} />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Tailored Solutions</h3>
+              <p className="text-white/80 leading-relaxed">
+                Our expertise is ideal for all types of businesses looking to offset their energy cost with the most efficient, uniquely tailored solar solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* بطاقة الابتكار */}
+        <div className="group bg-white border-2 border-maincolor p-10 rounded-[2rem] text-maincolor shadow-xl hover:scale-[1.02] transition-transform duration-500">
+          <div className="flex items-start gap-6">
+            <div className="p-4 bg-maincolor/5 rounded-xl group-hover:bg-maincolor group-hover:text-white transition-all">
+              <Lightbulb size={30} />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Legacy of Innovation</h3>
+              <p className="text-gray-600 leading-relaxed">
+                With a deep legacy in the industry and a continued passion for innovation, we’re bringing back the highest quality service to commercial installations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
       {/* Grid Projects Section */}
       <section className="py-24 bg-maincolor text-white">
         <div className="container mx-auto px-4">
@@ -162,7 +236,7 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div className="space-y-8" data-aos="fade-up-right">
               <div className="bg-white/5 p-8 rounded-2xl border-l-4 border-secendcolor">
-                <p className="text-xl opacity-90 leading-relaxed italic">"Commercial solar systems offer a quick return on investment for any industry."</p>
+                <p className="text-xl opacity-90 leading-relaxed italic">"With Ecotech commercial solar system solutions, no matter what industry you’re in, you’ll see a return on your investment quickly"</p>
               </div>
               <p className="text-lg opacity-80">With Ecotech solutions, you empower your business to be self-reliant in generating its own energy.</p>
             </div>
@@ -209,7 +283,87 @@ const About = () => {
           </div>
         </div>
       </section>
+{/* Business Value & Solar Solutions Section */}
+<section className="py-24 bg-gray-50 overflow-hidden">
+  <div className="container mx-auto px-4">
+    
+    {/* Part 1: Why Switch Now? (The Financial Argument) */}
+    <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
+      <div className="relative" data-aos="fade-right">
+        <div className="absolute -top-10 -left-10 w-32 h-32 bg-secendcolor/20 rounded-full blur-3xl"></div>
+        <h2 className="text-3xl md:text-5xl font-black text-maincolor mb-8 leading-tight">
+          The Best Time to <span className="text-secendcolor">Go Solar</span> is Now.
+        </h2>
+        <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+          <p>
+            Some Egyptian business owners may think the initial costs are too high. In fact, 
+            <span className="font-bold text-maincolor"> there’s never been a better time to switch.</span>
+          </p>
+          <p>
+            Today’s solar technology is more efficient than ever, and many government initiatives are available to offset installation costs. With Ecotech, you’ll see a 
+            <span className="text-green-600 font-bold"> return on your investment quickly</span>, no matter your industry.
+          </p>
+        </div>
+        
+        {/* Warranty Badge */}
+        <div className="mt-10 p-6 bg-white rounded-2xl shadow-xl border-l-8 border-maincolor flex items-center gap-6">
+          <Award className="text-secendcolor w-12 h-12 flex-shrink-0" />
+          <div>
+            <h4 className="font-bold text-maincolor text-xl">Industry-Leading Warranties</h4>
+            <p className="text-sm text-gray-500">We stand by our products and workmanship with a reputation of excellence.</p>
+          </div>
+        </div>
+      </div>
 
+      <div className="grid grid-cols-1 gap-6" data-aos="fade-left">
+        {[
+          { title: "Turnkey Installations", desc: "Complete, ready-to-use solutions for small businesses.", icon: <Zap /> },
+          { title: "Custom Solar Systems", desc: "Uniquely designed energy infrastructures for larger facilities.", icon: <Building /> },
+          { title: "Configuration Options", desc: "From rooftop systems to ground-mounted installations.", icon: <Target /> }
+        ].map((item, idx) => (
+          <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-secendcolor transition-all group">
+            <div className="flex items-start gap-5">
+              <div className="p-3 bg-gray-50 rounded-lg text-maincolor group-hover:bg-maincolor group-hover:text-white transition-colors">
+                {React.cloneElement(item.icon, { size: 28 })}
+              </div>
+              <div>
+                <h3 className="font-bold text-xl text-maincolor mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Part 2: Commitment & Expertise (Horizontal Banner) */}
+    <div 
+      className="bg-maincolor rounded-[3rem] p-10 md:p-16 text-white relative overflow-hidden" 
+      data-aos="zoom-in"
+    >
+      <div className="absolute right-0 bottom-0 w-1/2 h-full opacity-10 pointer-events-none">
+         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFFFFF" d="M44.7,-76.4C58.1,-69.2,69.2,-57.1,76.5,-43.3C83.8,-29.5,87.3,-14.7,86.1,-0.7C84.8,13.3,78.8,26.5,70.5,38.6C62.2,50.7,51.6,61.7,39,69.5C26.4,77.3,13.2,82,0.4,81.3C-12.4,80.6,-24.8,74.5,-36.4,66.1C47.9,57.7,-58.7,47.1,-66.9,34.9C-75.1,22.7,-80.8,8.9,-80,4.6C-79.1,-18.1,-71.8,-31.2,-62.1,-41.8C-52.5,-52.4,-40.5,-60.5,-28.1,-68.2C-15.6,-75.9,-2.8,-83.1,11,-85C24.8,-86.9,44.7,-76.4Z" transform="translate(100 100)" />
+         </svg>
+      </div>
+
+      <div className="relative z-10 max-w-4xl">
+        <h3 className="text-2xl md:text-3xl font-bold mb-6 italic">
+          "Helping small businesses and commercial clients choose the right solar energy solution."
+        </h3>
+        <p className="text-xl text-white/80 leading-relaxed mb-8">
+          Ecotech has been committed to <span className="text-secendcolor font-bold">quality products, excellent service and superior workmanship.</span> Whether it's a rooftop or ground-mounted system, we meet your space considerations with precision.
+        </p>
+        <div className="flex flex-wrap gap-4">
+          <span className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm font-semibold">Rooftop Systems</span>
+          <span className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm font-semibold">Ground Mounted</span>
+          <span className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm font-semibold">Small Business Turnkey</span>
+          <span className="px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm font-semibold">Large Facility Custom</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       {/* Popup / Modal */}
       {selectedProject && (
         <div 

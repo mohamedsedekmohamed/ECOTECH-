@@ -4,10 +4,24 @@
     --color-secendcolor: #ffd400;
     --color-therrtcolor: #037235;
 }
+body {
+  font-family: "Inter", sans-serif;
+   /* الوزن الافتراضي */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1 {
+  font-weight: 700;
+}
 
-
-/* body{
-  font-family: "Anton", sans-serif;
+p {
   font-weight: 400;
-  font-style: normal;
-} */
+}
+
+.light-text {
+  font-weight: 300;
+}
+
+.bold-text {
+  font-weight: 600;
+}
