@@ -47,7 +47,7 @@ const serviceLinks = [
           {/* Logo */}
           <Link to="/" className="flex items-center  text-xl font-bold transition-colors hover:opacity-80">
             <img src={sun} alt="Logo" className="h-21 w-21 text-secendcolor" />
-         <span className="hidden sm:inline text-2xl lg:text-4xl text-maincolor font-extrabold">ECOTECH</span>
+         <span className="inline text-2xl lg:text-4xl text-maincolor font-extrabold">ECOTECH</span>
           </Link>
 
           <ul className="hidden items-center gap-2 md:flex">
