@@ -1,9 +1,9 @@
 @import "tailwindcss";
-@theme {
-    --color-maincolor: #006584;
-    --color-secendcolor: #ffd400;
-    --color-therrtcolor: #037235;
-}
+  @theme {
+      --color-maincolor: #006584;
+      --color-secendcolor: #ffd400;
+      --color-therrtcolor: #037235;
+  }
 body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;

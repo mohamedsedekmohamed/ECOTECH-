@@ -8,7 +8,51 @@ i18n
     resources: {
       en: {
         translation: {
-          home: "Home",
+          OurSolarLegacy: "Our Solar Legacy",
+           Deliveringclean:"Delivering clean energy solutions across Egypt with precision and innovation.",
+         SuccessfulInstallations: "Successful installations",
+           home: "Home",
+          projects: "Projects",
+          "careers": {
+    "header": {
+      "title": "Join Our Team",
+      "subtitle": "We are always looking for talented people to join us and grow together",
+      "breadcrumb": "Careers"
+    },
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "phone": "Phone Number",
+      "phonePlaceholder": "01xxxxxxxxx",
+      "city": "City",
+      "cities": {
+        "cairo": "Cairo",
+        "alex": "Alexandria"
+      },
+      "marital": "Marital Status",
+      "status": {
+        "single": "Single",
+        "married": "Married"
+      },
+      "birthDate": "Birth Date",
+      "address": "Detailed Address",
+      "qualification": "Educational Qualification",
+      "edu": {
+        "bachelor": "Bachelor's Degree"
+      },
+      "university": "University",
+      "college": "College / Faculty",
+      "graduateDate": "Graduation Date",
+      "salary": "Expected Salary",
+      "portfolio": "Portfolio / LinkedIn Link",
+      "experiences": "Work Experiences & Courses",
+      "textareaPlaceholder": "Tell us about your previous experience and the courses you have taken...",
+      "attachCV": "Attach Your CV (PDF)",
+      "clickUpload": "Click to upload or drag and drop",
+      "submit": "Send Application"
+    }
+  },
+  labelsclient: "Client",
           Aboutt: "About",
           careerss: "Careers",
           contacts: "Contact",
@@ -250,28 +294,7 @@ i18n
     "li": "Li-ion Batteries",
     "mega": "Mega Batteries"
   },
- "careers": {
-    "header": {
-      "title": "Join Our Team",
-      "subtitle": "Be part of the green energy revolution. Submit your application below."
-    },
-    "form": {
-      "name": "Your Name (required)",
-      "namePlaceholder": "Enter your full name",
-      "email": "Your Email (required)",
-      "emailPlaceholder": "name@example.com",
-      "phone": "Your Phone (required)",
-      "phonePlaceholder": "01xxxxxxxxx",
-      "attachCV": "Attach Your CV (required)",
-      "clickUpload": "Click to upload",
-      "orDrag": "or drag and drop",
-      "fileTypes": "PDF, DOC, DOCX (Max 5MB)",
-      "moreDetails": "More Details",
-      "textareaPlaceholder": "Tell us more about your experience...",
-      "submit": "Send Application"
-    },
-    "footer": "Ecotech is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment."
-  },
+ 
   "readMore": "Read More",
   "partners": {
     "title": "Our Trusted",
@@ -500,6 +523,10 @@ i18n
       },
       ar: {
         translation: {
+OurSolarLegacy: "إرثنا في الطاقة الشمسية",
+Deliveringclean: "نقدم حلول طاقة نظيفة في جميع أنحاء مصر بدقة وابتكار.",
+SuccessfulInstallations: "تركيبات ناجحة",
+
           home: "الرئيسية",
           Aboutt: "من نحن",
           careerss: "الوظائف",
@@ -507,11 +534,53 @@ i18n
           services: "خدماتنا",
           solarEnergy: "الطاقة الشمسية",
           smartBuildingsnew: "المباني الذكية",
+          projects: "المشاريع",
           smartBuilding: "المباني الذكية",
           energySaving: "توفير الطاقة",
           energySavingsnew: "توفير الطاقة",
           energyStorag: "تخزين الطاقة",
           energyStoragenew: "تخزين الطاقة",
+          labelsclient: "عميل",
+          
+          "careers": {
+    "header": {
+      "title": "انضم إلى فريقنا",
+      "subtitle": "نحن نبحث دائماً عن المبدعين للانضمام إلينا والنمو معاً",
+      "breadcrumb": "التوظيف"
+    },
+    "form": {
+      "name": "الاسم بالكامل",
+      "namePlaceholder": "أدخل اسمك الرباعي",
+      "phone": "رقم الهاتف",
+      "phonePlaceholder": "01xxxxxxxxx",
+      "city": "المدينة",
+      "cities": {
+        "cairo": "القاهرة",
+        "alex": "الإسكندرية"
+      },
+      "marital": "الحالة الاجتماعية",
+      "status": {
+        "single": "أعزب",
+        "married": "متزوج"
+      },
+      "birthDate": "تاريخ الميلاد",
+      "address": "العنوان بالتفصيل",
+      "qualification": "المؤهل الدراسي",
+      "edu": {
+        "bachelor": "درجة البكالوريوس"
+      },
+      "university": "الجامعة",
+      "college": "الكلية",
+      "graduateDate": "تاريخ التخرج",
+      "salary": "الراتب المتوقع",
+      "portfolio": "رابط الأعمال / لينكد إن",
+      "experiences": "الخبرات العملية والدورات",
+      "textareaPlaceholder": "تحدث عن خبراتك السابقة والدورات التي حصلت عليها...",
+      "attachCV": "أرفق السيرة الذاتية (PDF)",
+      "clickUpload": "اضغط للرفع أو قم بسحب الملف هنا",
+      "submit": "إرسال الطلب"
+    }
+  },
           "energySavings": {
     "badge": "كفاءة مستدامة",
     "heroTitle": "توفير",
@@ -672,28 +741,7 @@ i18n
       "submit": "إرسال الرسالة"
     }
   },
-           "careers": {
-    "header": {
-      "title": "انضم إلى فريقنا",
-      "subtitle": "كن جزءًا من ثورة الطاقة الخضراء. قدّم طلبك أدناه."
-    },
-    "form": {
-      "name": "الاسم الكامل (مطلوب)",
-      "namePlaceholder": "أدخل اسمك الكامل",
-      "email": "البريد الإلكتروني (مطلوب)",
-      "emailPlaceholder": "name@example.com",
-      "phone": "رقم الهاتف (مطلوب)",
-      "phonePlaceholder": "01xxxxxxxxx",
-      "attachCV": "إرفاق السيرة الذاتية (مطلوب)",
-      "clickUpload": "انقر للتحميل",
-      "orDrag": "أو اسحب وأسقط",
-      "fileTypes": "PDF, DOC, DOCX (الحد الأقصى 5 ميغابايت)",
-      "moreDetails": "مزيد من التفاصيل",
-      "textareaPlaceholder": "أخبرنا المزيد عن خبرتك...",
-      "submit": "إرسال الطلب"
-    },
-    "footer": "شركة Ecotech توفّر فرص عمل متساوية للجميع. نحن نحتفل بالتنوع ونلتزم بخلق بيئة شاملة."
-  },
+     
           "valuesSection": {
     "header": {
       "subtitle": "مبادئنا الأساسية",

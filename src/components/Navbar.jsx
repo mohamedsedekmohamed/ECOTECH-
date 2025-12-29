@@ -3,10 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 import { Home, Info, Briefcase, Mail, Menu, X, Globe, ChevronDown, Sun, Building, Leaf, BatteryCharging } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaRegSun } from "react-icons/fa6";
 import { RiProfileLine } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
 import sun from '../assets/sun.png';
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+
 const Navbar = () => {
   const { t, i18n } = useTranslation();
 
@@ -26,6 +27,7 @@ const serviceLinks = [
  const navItems = [
   { path: "/", label: t("home"), icon: Home },
   { path: "/about", label: t("Aboutt"), icon: Info },
+  { path: "/projects", label: t("projects"), icon: AiOutlineFundProjectionScreen },
   { path: "/careers", label: t("careerss"), icon: RiProfileLine },
   { path: "/contact", label: t("contacts"), icon: Mail },
 ];
@@ -40,21 +42,20 @@ const serviceLinks = [
 
   return (
     <nav className="sticky top-0 z-50 border-b border-therrtcolor/20 text-maincolor shadow-lg bg-white/95 backdrop-blur-sm">
-      <div className="container mx-auto px-4">
+      <div className="W-[90%] mx-auto px-2">
         <div className="flex h-24 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center  text-xl font-bold transition-colors hover:opacity-80">
-            {/* <FaRegSun className="h-7 w-7 text-secendcolor" /> */}
             <img src={sun} alt="Logo" className="h-21 w-21 text-secendcolor" />
          <span className="hidden sm:inline text-2xl lg:text-4xl text-maincolor font-extrabold">ECOTECH</span>
           </Link>
 
-          <ul className="hidden items-center gap-5 md:flex">
+          <ul className="hidden items-center gap-2 md:flex">
             {navItems.slice(0, -1).map((item, index) => (
               <li key={item.path} data-aos="fade-up" data-aos-delay={index * 100}>
                 <Link
                   to={item.path}
-                  className={`flex items-center gap-2 rounded-md px-4 py-2 text-base font-semibold transition-all duration-300 ${
+                  className={`flex items-center gap-2 rounded-md px-2 py-2 text-base font-semibold transition-all duration-300 ${
                     isActive(item.path) ? "bg-maincolor text-white shadow-md" : "text-maincolor hover:bg-secendcolor/20"
                   }`}
                 >
@@ -67,7 +68,7 @@ const serviceLinks = [
             {/* Dropdown Services */}
             <li className="relative group" onClick={() => setServicesOpen(p=>!p)} >
               <button
-                className={`flex items-center gap-2 rounded-md px-4 py-2 text-base font-semibold transition-all duration-300 ${
+                className={`flex items-center gap-2 rounded-md px-2 py-2 text-base font-semibold transition-all duration-300 ${
                   isServiceActive ? "bg-maincolor text-white shadow-md" : "text-maincolor hover:bg-secendcolor/20"
                 }`}
               >
@@ -97,7 +98,7 @@ const serviceLinks = [
             <li data-aos="fade-up" data-aos-delay={300}>
               <Link
                 to="/contact"
-                className={`flex items-center gap-2 rounded-md px-4 py-2 text-base font-semibold transition-all duration-300 ${
+                className={`flex items-center gap-2 rounded-md px-2 py-2 text-base font-semibold transition-all duration-300 ${
                   isActive("/contact") ? "bg-maincolor text-white shadow-md" : "text-maincolor hover:bg-secendcolor/20"
                 }`}
               >
@@ -130,14 +131,17 @@ const serviceLinks = [
         {/* Mobile Navigation */}
         <div className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${isOpen ? "max-h-[500px] pb-4" : "max-h-0"}`}>
           <ul className="flex flex-col gap-1">
-            <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 px-4 py-3 text-maincolor font-semibold">
+            <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 px-2 py-3 text-maincolor font-semibold">
                 <Home className="h-5 w-5" /> {t("Home")}
             </Link>
-            <Link to="/about" onClick={() => setIsOpen(false)} className="flex items-center gap-3 px-4 py-3 text-maincolor font-semibold">
+            <Link to="/about" onClick={() => setIsOpen(false)} className="flex items-center gap-3 px-2 py-3 text-maincolor font-semibold">
                 <Info className="h-5 w-5" /> {t("Aboutt")}
             </Link>
-            <Link to="/careers" onClick={() => setIsOpen(false)} className="flex items-center gap-3 px-4 py-3 text-maincolor font-semibold">
+            <Link to="/careers" onClick={() => setIsOpen(false)} className="flex items-center gap-3 px-2 py-3 text-maincolor font-semibold">
                 <Info className="h-5 w-5" /> {t("Careers")}
+            </Link>
+            <Link to="/projects" onClick={() => setIsOpen(false)} className="flex items-center gap-3 px-2 py-3 text-maincolor font-semibold">
+                <Info className="h-5 w-5" /> {t("projects")}
             </Link>
             
             {/* Services Mobile Accordion */}

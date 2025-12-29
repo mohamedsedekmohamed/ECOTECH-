@@ -13,84 +13,35 @@ import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 import ValuesSection from "../components/ValuesSection";
 // Schools & Academies
-
-import taybahAcad from "../assets/project/Taybah Academy.jpg";
-import taybahInt from "../assets/project/Taybah International School.jpg";
-import nobughBoys from "../assets/project/Nobugh Boys School.jpg";
-import noboughAcad from "../assets/project/Nubough Academy.jpg";
-import alRashid from "../assets/project/Al-Rashid Private School.png";
-import alOthman from "../assets/project/Al Othman Private School.jpeg";
-import alQudsInt from "../assets/project/Al-Quds International School.jpg";
-import jerusalemNursery from "../assets/project/Jerusalem Nursery.jpg";
-import jerusalemLang from "../assets/project/Jerusalem School for Languages..jpg";
-import alexLife from "../assets/project/Alex Life Private School.jpg";
-import awalBitash from "../assets/project/Awal Al-Bitash School.jpg";
-import brillianceGirls from "../assets/project/Brilliance GirlsSchool.jpg";
-import brillianceLang from "../assets/project/Brilliance Language School.jpg";
-import cityInt from "../assets/project/City International School.jpg";
-import excellencePriv from "../assets/project/Excellence Private School.jpg";
-import goldenSchool from "../assets/project/Golden School.png";
-import smartSchool from "../assets/project/Smart School.jpg";
-import zahraAwael from "../assets/project/Zahra Al-Awael Private School.jpeg";
-import zahraMadaen from "../assets/project/Zahra Al-Madaen Private School.jpg";
-
-// Villas & Others
-import villa1 from "../assets/project/Villa Complex.png";
-import villa2 from "../assets/project/Villa Complex 2.png";
-import alexElec from "../assets/project/agmye.jpg";
+import {useNavigate} from 'react-router-dom';
 
 const About = () => {
     const { t, i18n } = useTranslation();
 
   const projects = [
     {
+      id: "educational",
       name: t("about.projects.educational"),
       icon: <Award />,
-      images: [
-        { img: taybahAcad, title: "Thebes Academy" },
-        { img: taybahInt, title: "Tiba International School" },
-        { img: noboughAcad, title: "Nobugh Academy" },
-        { img: nobughBoys, title: "Nobogh Private School (Boys)" },
-        { img: alOthman, title: "Al Othman Private School" },
-        { img: alQudsInt, title: "El Quds International Schools - QIS" },
-        { img: jerusalemNursery, title: "El QUDS Nursery" },
-        { img: jerusalemLang, title: "El Quds Language School" },
-        { img: alexLife, title: "Alex Life Language School" },
-        { img: awalBitash, title: "Aweal El Betash Private School" },
-        { img: goldenSchool, title: "Golden Language School" },
-        { img: alRashid, title: "El Rashid Language Schools" },
-        { img: smartSchool, title: "Smart International Schools" },
-        { img: zahraAwael, title: "Awael Private School" },
-        { img: zahraMadaen, title: "Zahret El-Madain Private School" },
-        { img: brillianceGirls, title: "Brilliance Girls School" },
-        { img: brillianceLang, title: "Brilliance Language School" },
-        { img: cityInt, title: "City International School" },
-        { img: excellencePriv, title: "Excellence Private School" },
-      ],
+    
     },
     {
+      id: "residential",
       name: t("about.projects.residential"),
       icon: <Building2 />,
-      images: [
-        { img: villa1, title: "Private Villa Complex - Phase 1" },
-        { img: villa2, title: "Residential Villa Solar Rooftop" },
-      ],
+     
     },
     {
+      id: "largeFacilities",
       name: t("about.projects.largeFacilities"),
       icon: <Building2 />,
-      images: [
-        {
-          img: alexElec,
-          title: "Alexandria Electricity Distribution Building",
-        },
-      ],
+     
     },
   ];
   const isRTL = i18n.language === "ar";
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentImgIdx, setCurrentImgIdx] = useState(0);
-
+const navigate = useNavigate();
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -314,9 +265,10 @@ const About = () => {
                 {projects.map((item, idx) => (
                   <div
                     key={idx}
-                    onClick={() => {
-                      setSelectedProject(item);
-                      setCurrentImgIdx(0);
+                
+                   onClick={() => {
+            navigate(`/projects#${item.id}`);
+        
                     }}
                     className="bg-white group hover:bg-secendcolor transition-all duration-500 p-8 rounded-2xl text-maincolor text-center shadow-lg cursor-pointer"
                   >
