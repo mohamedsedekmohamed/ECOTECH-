@@ -134,9 +134,9 @@ const lang=i18n.language==="ar"
 
       {/* Map Section */}
       <section className="h-[500px] relative" data-aos="zoom-in">
+        
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3412.87123456789!2d29.96!3d31.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDEyJzAwLjAiTiAyOcKwNTcnMzYuMCJF!5e0!3m2!1sen!2seg!4v1234567890123" 
-          className="w-full h-full grayscale contrast-125"
+src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3412.551!2d29.964483!3d31.205418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c4e69b59535f%3A0x6b7798361730740a!2zMzHCsDEyJzE5LjUiTiAyOcKwNTcnNTIuMSJF!5e0!3m2!1sar!2seg!4v1700000000000!5m2!1sar!2seg"          className="w-full h-full grayscale contrast-125"
           style={{ border: 0 }} 
           allowFullScreen="" 
           loading="lazy"

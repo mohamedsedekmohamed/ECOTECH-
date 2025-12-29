@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Award, Building2, MapPin, Zap, Activity, ShieldCheck, ArrowUpRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next'; // افترضت أنك تستخدم i18n بناءً على كودك
+import { PiSolarPanelBold } from "react-icons/pi";
+import { HiUser } from "react-icons/hi";
 
 // استيراد الصور (نفس الصور التي قدمتها)
 import taybahAcad from "../assets/project/Taybah Academy.jpg";
@@ -26,11 +28,12 @@ import villa1 from "../assets/project/Villa Complex.png";
 import villa2 from "../assets/project/Villa Complex 2.png";
 import alexElec from "../assets/project/agmye.jpg";
 import { useLocation } from 'react-router-dom';
+import { AiOutlineAim } from "react-icons/ai";
 
 const Projects = () => {
   const { t } = useTranslation();
 const { hash } = useLocation();
-
+const [selectedProject, setSelectedProject] = useState(null);
   const colors = {
     main: '#006584',
     secondary: '#ffd400',
@@ -282,41 +285,21 @@ const { hash } = useLocation();
   ];
 
   return (
- <div className="bg-[#fcfcfc] py-20 px-4 sm:px-6 lg:px-8 min-h-screen">
+<div className="bg-[#fcfcfc] py-20 px-4 sm:px-6 lg:px-8 min-h-screen">
       <div className="max-w-7xl mx-auto">
         
         {/* Hero Section */}
         <div className="text-center mb-24 relative">
-          <div 
-            className="absolute inset-0 -top-10 blur-3xl rounded-full h-64 w-64 mx-auto -z-10 opacity-10"
-            style={{ backgroundColor: colors.main }}
-          ></div>
           <h1 className="text-5xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight">
              <span style={{ color: colors.main }} className="italic">{t("OurSolarLegacy")}</span> 
           </h1>
-          <p className="text-slate-500 max-w-2xl mx-auto text-lg">
-{t("Deliveringclean")}          </p>
+          <p className="text-slate-500 max-w-2xl mx-auto text-lg">{t("Deliveringclean")}</p>
         </div>
 
         {projectsData.map((section, idx) => (
           <div key={idx} id={section.id} className="mb-32 scroll-mt-24">
-            
-            {/* Section Header */}
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 border-l-8 pl-6" 
-                 style={{ borderColor: colors.secondary }}>
-              <div>
-                <div className="flex items-center gap-2 mb-2 font-bold uppercase tracking-[0.2em] text-sm"
-                     style={{ color: colors.main }}>
-                  {React.cloneElement(section.icon, { style: { color: colors.main }, size: 24 })}
-                  <span>{section.category}</span>
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-800 uppercase">
-                   {section.category}
-                </h2>
-              </div>
-              <div className="px-4 py-1 rounded-full text-xs font-bold uppercase tracking-tighter bg-slate-100 text-slate-500">
-                {section.items.length} {t("SuccessfulInstallations")}
-              </div>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 border-l-8 pl-6" style={{ borderColor: colors.secondary }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 uppercase">{section.category}</h2>
             </div>
 
             {/* Projects Grid */}
@@ -324,66 +307,26 @@ const { hash } = useLocation();
               {section.items.map((project, pIdx) => (
                 <div 
                   key={pIdx} 
-                  className="group bg-white rounded-[2.5rem] shadow-[0_15px_50px_-15px_rgba(0,0,0,0.05)] hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col h-full border border-slate-50"
+                  // 2. جعل الكارت قابل للضغط لفتح التفاصيل
+                  onClick={() => setSelectedProject(project)}
+                  className="group cursor-pointer bg-white rounded-[2.5rem] shadow-[0_15px_50px_-15px_rgba(0,0,0,0.05)] hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col h-full border border-slate-50"
                 >
-                  {/* Image Container */}
                   <div className="relative h-72 overflow-hidden">
-                    <img
-                      src={project.img}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    
-                    {/* Dark Overlay */}
+                    <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    
-                  {/* العميل - Client (الجزء الجديد) */}
-  
-                    {/* Bottom Info */}
                     <div className="absolute bottom-6 left-8 right-8 text-white">
-                       <div className="flex items-center gap-2 mb-2 opacity-80 uppercase text-[10px] font-bold tracking-[0.2em]" style={{ color: colors.secondary }}>
-                        <MapPin size={14} />
-                        {project.location}
+                      <div className="flex items-center gap-2 mb-2 opacity-80 uppercase text-[10px] font-bold tracking-[0.2em]" style={{ color: colors.secondary }}>
+                        <MapPin size={14} /> {project.location}
                       </div>
-                      <h3 className="text-xl font-bold leading-tight group-hover:translate-x-2 transition-transform duration-300">
-                        {project.title}
-                      </h3>
+                      <h3 className="text-xl font-bold leading-tight group-hover:translate-x-2 transition-transform duration-300">{project.title}</h3>
                     </div>
                   </div>
 
-                  {/* Details Area */}
-                  <div className="p-8 flex-grow flex flex-col justify-between">
-                    <div className="space-y-4 mb-8">
-                      {/* Scope Detail */}
-                      {/* <div className="flex items-center justify-between p-4 rounded-2xl bg-slate-50 group-hover:bg-white group-hover:ring-1 transition-all"
-                           style={{ '--tw-ring-color': colors.main }}>
-                        <div className="flex items-center gap-3">
-                          <Activity size={18} style={{ color: colors.main }} />
-                          <span className="text-xs font-bold text-slate-500 uppercase tracking-tight">Scope</span>
-                        </div>
-                        <span className="text-xs font-black text-slate-800">{project.scope}</span>
-                      </div> */}
-  <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50 group-hover:bg-white group-hover:ring-1 transition-all"
-         style={{ '--tw-ring-color': colors.secondary }}>
-      <div className="flex items-center gap-2">
-        <Building2 size={18} style={{ color: colors.secondary }} />
-      <span className="text-[8px] font-bold text-slate-500 uppercase tracking-tight">Client</span>
-      </div>
-      <span className="text-xs font-bold text-slate-700">{project.client}</span>
-    </div>
-
-                      {/* Energy Detail */}
-                      <div className="flex items-center justify-between p-4 rounded-2xl bg-slate-50 group-hover:bg-white group-hover:ring-1 transition-all"
-                           style={{ '--tw-ring-color': colors.third }}>
-                        <div className="flex items-center gap-3">
-                          <Zap size={18} style={{ color: colors.third }} />
-                          <span className="text-xs font-bold text-slate-500 uppercase tracking-tight">Yield</span>
-                        </div>
-                        <span className="text-xs font-black text-slate-800" style={{ color: colors.third }}>{project.annualGen}</span>
-                      </div>
-                    </div>
-
-                  
+                  {/* 3. عرض زر بسيط بدلاً من كل التفاصيل */}
+                  <div className="p-6 text-center">
+                    <button className="text-sm font-bold flex items-center justify-center gap-2 mx-auto transition-colors" style={{ color: colors.main }}>
+                      {t("View Details")} <ArrowUpRight size={16} />
+                    </button>
                   </div>
                 </div>
               ))}
@@ -391,6 +334,90 @@ const { hash } = useLocation();
           </div>
         ))}
       </div>
+
+   {selectedProject && (
+  <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 bg-slate-900/80 backdrop-blur-md animate-in fade-in duration-300">
+    <div 
+      className="bg-white rounded-[1rem] sm:rounded-[1.5rem] max-w-5xl w-full max-h-[95vh] overflow-y-auto overflow-x-hidden shadow-2xl flex flex-col md:flex-row relative animate-in zoom-in-95 duration-300"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* زر الإغلاق - ثابت في الأعلى */}
+      <button 
+        onClick={() => setSelectedProject(null)}
+        className="absolute top-4 right-4 z-50 bg-white/80 backdrop-blur-sm hover:bg-red-500 hover:text-white text-slate-500 rounded-full p-2 shadow-lg transition-all"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      {/* الجزء الأيسر: الصور - يأخذ مساحة أقل في الموبايل */}
+      <div className="w-full md:w-1/2 bg-slate-100 p-4 sm:p-6 flex flex-col justify-center">
+        <div className="rounded-2xl overflow-hidden shadow-lg aspect-video md:aspect-auto">
+          <img src={selectedProject.img} className="w-full h-full object-cover" alt="Main" />
+        </div>
+      </div>
+
+      {/* الجزء الأيمن: البيانات - مع مسافات مرنة */}
+      <div className="w-full md:w-1/2 p-6 sm:p-10 bg-white flex flex-col justify-center">
+        {/* نستخدم space-y-6 في الموبايل و space-y-10 في الشاشات الكبيرة */}
+        <div className="relative border-l-2 border-slate-100 ml-4 sm:ml-6 space-y-6 sm:space-y-10">
+          
+          {/* Project Name */}
+          <div className="relative pl-8 sm:pl-12">
+            <div className="absolute -left-[17px] sm:-left-[26px] top-0 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white border-4 border-slate-50 shadow-sm flex items-center justify-center">
+              <PiSolarPanelBold size={16} className="text-secendcolor sm:w-[20px]" />
+            </div>
+            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">Project Name</h4>
+            <p className="text-lg sm:text-xl font-extrabold text-[#004a61] leading-tight">{selectedProject.title}</p>
+          </div>
+
+          {/* Client */}
+          <div className="relative pl-8 sm:pl-12">
+            <div className="absolute -left-[17px] sm:-left-[26px] top-0 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white border-4 border-slate-50 shadow-sm flex items-center justify-center">
+              <HiUser size={16} className="text-maincolor sm:w-[20px]" />
+            </div>
+            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">Client</h4>
+            <p className="text-lg sm:text-xl font-extrabold text-red-700 leading-tight">{selectedProject.client}</p>
+          </div>
+
+          {/* Location */}
+          <div className="relative pl-8 sm:pl-12">
+            <div className="absolute -left-[17px] sm:-left-[26px] top-0 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white border-4 border-slate-50 shadow-sm flex items-center justify-center">
+              <MapPin size={16} className="text-therrtcolor sm:w-[20px]" />
+            </div>
+            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">Location</h4>
+            <p className="text-base sm:text-lg font-bold text-slate-700 leading-tight">{selectedProject.location}</p>
+          </div>
+
+          {/* Scope of Work */}
+          <div className="relative pl-8 sm:pl-12">
+            <div className="absolute -left-[17px] sm:-left-[26px] top-0 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white border-4 border-slate-50 shadow-sm flex items-center justify-center">
+              <AiOutlineAim size={16} className="text-black sm:w-[20px]" />
+            </div>
+            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">Scope of Work</h4>
+            <p className="text-base sm:text-lg font-bold text-slate-700 leading-tight">{selectedProject.scope}</p>
+          </div>
+
+          {/* Annual Generation */}
+          <div className="relative pl-8 sm:pl-12">
+            <div className="absolute -left-[17px] sm:-left-[26px] top-0 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white border-4 border-slate-50 shadow-sm flex items-center justify-center">
+              <Zap size={16} className="text-maincolor sm:w-[20px]" />
+            </div>
+            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">Annual Generation</h4>
+            <p className="text-xl sm:text-2xl font-black text-[#004a61] leading-tight">{selectedProject.annualGen}</p>
+          </div>
+
+        </div>
+      </div>
+       <button 
+        onClick={() => setSelectedProject(null)}
+        className="absolute bottom-4 right-4 z-50 bg-red-600 backdrop-blur-sm hover:bg-red-500 hover:text-white text-white rounded-[6px] p-2 shadow-lg transition-all"
+      >
+Close
+      </button>
+
+    </div>
+  </div>
+)}
     </div>
   );
 };
