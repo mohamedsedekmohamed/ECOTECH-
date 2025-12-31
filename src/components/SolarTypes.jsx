@@ -36,8 +36,14 @@ const SolarTypes = () => {
       className="py-24 bg-maincolor overflow-hidden" 
       dir={isRTL ? "rtl" : "ltr"}
     >
-      <div className="container mx-auto px-6">
-        
+      <div className="container mx-auto px-6 relative">
+         <div className="absolute inset-0 z-0">
+    <span className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full animate-float"></span>
+    <span className="absolute bottom-20 right-20 w-48 h-48 bg-white/10 rounded-full animate-float-delay"></span>
+    <span className="absolute top-1/2 left-1/3 w-24 h-24 bg-white/10 rounded-full animate-float-slow"></span>
+    <span className="absolute bottom-10 left-20 w-16 h-16 bg-white/15 rounded-full animate-float"></span>
+  </div>
+
         {/* العناوين الرئيسية */}
         <div className="text-center mb-20">
           <motion.span 

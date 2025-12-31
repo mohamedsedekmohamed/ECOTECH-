@@ -8,10 +8,15 @@ const Footer = () => {
   const isRTL = i18n.language === "ar";
 
   return (
-    <footer className="bg-maincolor text-white py-20 font-sans relative overflow-hidden" dir={isRTL ? "rtl" : "ltr"}>
+    <footer className="bg-maincolor text-white py-20 font-sans  relative overflow-hidden" dir={isRTL ? "rtl" : "ltr"}>
       {/* ديكورات خلفية */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-therrtcolor opacity-10 blur-[120px] rounded-full -mr-64 -mt-64 transition-all duration-700"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-secendcolor opacity-[0.03] blur-[100px] rounded-full -ml-32 -mb-32"></div>
+ <div className="absolute inset-0 z-0">
+    <span className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full animate-float"></span>
+    <span className="absolute top-1/2 left-1/3 w-24 h-24 bg-white/10 rounded-full animate-float-slow"></span>
+    <span className="absolute bottom-10 left-20 w-16 h-16 bg-white/15 rounded-full animate-float"></span>
+  </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-20">
@@ -47,7 +52,7 @@ const Footer = () => {
                   <FaMapMarkerAlt size={20} />
                 </div>
                 <p className="text-sm text-gray-300 leading-relaxed pt-1">
-                  20th St. behind Green Plaza, Green Towers, Tower 17, Floor 11, Smouha, Alexandria, Egypt.
+                  20th St. behind Green Plaza, Green Towers, Tower 21, Floor 11, Smouha, Alexandria, Egypt.
                 </p>
               </div>
 

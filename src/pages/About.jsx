@@ -71,6 +71,14 @@ const navigate = useNavigate();
     >
       {/* Header Section */}
       <section className="relative py-24 bg-maincolor text-white overflow-hidden">
+ <div className="absolute inset-0 z-0">
+    <span className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full animate-float"></span>
+    <span className="absolute bottom-20 right-20 w-48 h-48 bg-white/10 rounded-full animate-float-delay"></span>
+    <span className="absolute top-1/2 left-1/3 w-24 h-24 bg-white/10 rounded-full animate-float-slow"></span>
+    <span className="absolute bottom-10 left-20 w-16 h-16 bg-white/15 rounded-full animate-float"></span>
+  </div>
+
+
         <div className="container mx-auto px-4 relative z-10">
           <h1
             className="text-4xl md:text-7xl font-extrabold mb-6"
