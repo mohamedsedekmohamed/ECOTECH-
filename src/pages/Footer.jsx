@@ -52,7 +52,7 @@ const Footer = () => {
                   <FaMapMarkerAlt size={20} />
                 </div>
                 <p className="text-sm text-gray-300 leading-relaxed pt-1">
-                  20th St. behind Green Plaza, Green Towers, Tower 21, Floor 2, Smouha, Alexandria, Egypt.
+                 {t("footerlocation")} 
                 </p>
               </div>
 
