@@ -63,7 +63,7 @@ const Footer = () => {
                 </div>
                 <div className="p-4 rounded-3xl bg-white/5 border border-white/5">
                   <p className="text-[10px] text-secendcolor font-black uppercase mb-1 tracking-wider">{t("footer.support")}</p>
-                  <p className="text-sm font-semibold">+20 155 154 6472</p>
+                  <p className="text-sm font-semibold">+20 155 154 6473</p>
                 </div>
               </div>
 
