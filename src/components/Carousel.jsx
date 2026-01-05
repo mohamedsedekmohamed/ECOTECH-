@@ -1,13 +1,27 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import s1 from '../assets/s1.jpg'
-import s2 from '../assets/s2.jpg'
+// import s2 from '../assets/s2.jpg'
 import s3 from '../assets/s3.jpg'
-import s4 from '../assets/s4.jpg'
+// import s4 from '../assets/s4.jpg'
 import s5 from '../assets/s5.jpg'
 import s6 from '../assets/s6.jpg'
 import s7 from '../assets/s7.jpg'
-import s8 from '../assets/s8.jpg'
+// import s8 from '../assets/s8.jpg'
+import Picture1 from '../assets/Picture1.png'
+import Picture2 from '../assets/Picture2.png'
+import Picture3 from '../assets/Picture3.png'
+import Picture4 from '../assets/Picture4.png'
+import Picture5 from '../assets/Picture5.png'
+import Picture6 from '../assets/Picture6.png'
+import Picture7 from '../assets/Picture7.png'
+import Picture8 from '../assets/Picture8.png'
+
+import p1 from '../assets/p1.png'
+import p2 from '../assets/p2.png'
+import p3 from '../assets/p3.png'
+
+
 
 const Carousel = () => {
   const { t, i18n } = useTranslation();
@@ -101,11 +115,22 @@ export default Carousel;
 
 const cards = [
   { url: s1, id: 1 },
-  { url: s2, id: 2 },
+  // { url: s2, id: 2 },
   { url: s3, id: 3 },
-  { url: s4, id: 4 },
+  // { url: s4, id: 4 },
   { url: s5, id: 5 },
   { url: s6, id: 6 },
   { url: s7, id: 7 },
-  { url: s8, id: 8 },
+  // { url: s8, id: 8 },
+  { url: Picture1, id: 9 },
+  { url: Picture2, id: 10},
+  { url: Picture3, id: 11 },
+  { url: Picture4, id: 12 },
+  { url: Picture5, id: 13 },
+  { url: Picture6, id: 14 },
+  { url: Picture7, id: 15},
+  { url: Picture8, id: 16},
+  { url: p1, id: 17},
+  { url: p2, id: 18},
+  { url: p3, id: 19},
 ];

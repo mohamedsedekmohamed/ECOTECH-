@@ -18,7 +18,7 @@ const Navbar = () => {
   
 const serviceLinks = [
   { path: "/services/solar-energy", label: t("solarEnergy"), icon: Sun },
-  { path: "/services/smart-buildings", label: t("smartBuilding"), icon: Building },
+  // { path: "/services/smart-buildings", label: t("smartBuilding"), icon: Building },
   { path: "/services/energy-savings", label: t("energySaving"), icon: Leaf },
   { path: "/services/energy-storage", label: t("energyStorag"), icon: BatteryCharging },
 ];

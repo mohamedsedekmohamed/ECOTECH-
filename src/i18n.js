@@ -64,7 +64,7 @@ i18n
           energySaving: "Energy Savings",
           energyStoragenew: "Energy Storage",
           energyStorag: "Energy Storage",
-          energySavingsnew: "Energy Storage",
+          energySavingsnew: "Energy Savings",
           "energyStorage": {
     "hero": {
       "badge": "Uninterrupted Power Solutions",

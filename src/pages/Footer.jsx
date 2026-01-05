@@ -2,6 +2,7 @@ import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
@@ -33,7 +34,7 @@ const Footer = () => {
             <div className="flex gap-4 pt-2">
               {[{ icon: <FaFacebookF />, url: "https://facebook.com/ecotecheg" },
                 { icon: <FaInstagram />, url: "https://instagram.com/ecotech.eg" },
-                { icon: <FaTwitter />, url: "https://x.com/ecotecheg" }
+                { icon: <FaLinkedin />, url: "https://www.linkedin.com/company/ecotechegypt" }
               ].map((item, idx) => (
                 <a key={idx} href={item.url} className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-secendcolor hover:text-maincolor hover:-translate-y-1.5 transition-all duration-300 shadow-xl">
                   {item.icon}
@@ -56,15 +57,14 @@ const Footer = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4">
                 <div className="p-4 rounded-3xl bg-white/5 border border-white/5">
                   <p className="text-[10px] text-secendcolor font-black uppercase mb-1 tracking-wider">{t("footer.sales")}</p>
                   <p className="text-sm font-semibold">+20 1276196600</p>
+                  <p className="text-sm font-semibold">+20 1281958866 </p>
+                  <p className="text-sm font-semibold">+20 1202426742</p>
                 </div>
-                <div className="p-4 rounded-3xl bg-white/5 border border-white/5">
-                  <p className="text-[10px] text-secendcolor font-black uppercase mb-1 tracking-wider">{t("footer.support")}</p>
-                  <p className="text-sm font-semibold">+20 155 154 6473</p>
-                </div>
+              
               </div>
 
               <div className="flex flex-col gap-3 px-2">
@@ -74,11 +74,11 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center gap-3 text-sm text-gray-300">
                   <FaPhoneAlt className="text-secendcolor" />
-                  <span>{t("footer.phone")}</span>
+                  <span> 034252270 </span>
                 </div>
               </div>
             </div>
-          </div>
+          </div>  
 
           <div className="lg:col-span-4 space-y-8">
             <h4 className="text-secendcolor text-sm font-bold uppercase tracking-[0.3em] flex items-center gap-2">

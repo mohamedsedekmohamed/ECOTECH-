@@ -7,6 +7,7 @@ import {
   Zap,
   Building2,
 } from "lucide-react";
+import pppd from "../assets/pppd.pdf";
 import { X, ChevronRight, ChevronLeft } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -183,9 +184,7 @@ const navigate = useNavigate();
           </div>
         </div>
         <div className="text-center md:text-left">
-          <span className="text-secendcolor font-bold tracking-[0.2em] uppercase text-sm mb-2 block">
-            {t("about.certification.title")}
-          </span>
+          
           <h2 className="text-2xl md:text-4xl font-black text-maincolor mb-4 leading-tight">
             {t("about.certification.subtitle")}
           </h2>
@@ -199,6 +198,18 @@ const navigate = useNavigate();
         </div>
       </div>
     </div>
+<span className="block text-center mb-2">
+  <a 
+    href={pppd}  // ضع هنا رابط ملف الـ PDF
+    target="_blank"            // يفتح في تاب جديدة
+    rel="noopener noreferrer"  // حماية
+  className="inline-block bg-maincolor text-white font-bold uppercase text-sm tracking-[0.2em] rounded-3xl px-6 py-3
+               hover:bg-maincolor/80 transition-colors duration-200
+               animate-pulse-glow"
+  >  
+    {t("about.certification.title")}
+  </a>
+</span>
 
     {/* الجزء السفلي: الخبرة التجارية (بطاقات صغيرة) */}
     <div

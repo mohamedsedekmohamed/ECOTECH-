@@ -55,7 +55,7 @@ const [isAuthenticated, setIsAuthenticated] = useState(
           <Route path="/projects" element={<Projects />} />
 
           <Route path="/services/solar-energy" element={<SolarEnergy />} />
-          <Route path="/services/smart-buildings" element={<SmartBuildings />} />
+          {/* <Route path="/services/smart-buildings" element={<SmartBuildings />} /> */}
           <Route path="/services/energy-savings" element={<EnergySavings />} />
           <Route path="/services/energy-storage" element={<EnergyStorage />} />
         </Route>

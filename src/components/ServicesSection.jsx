@@ -26,19 +26,19 @@ const ServicesSection = () => {
       color: "bg-yellow-500",
       path: "/services/solar-energy",
     },
-    {
-      title: t("smartBuildingsnew"),
-      icon: <Building className="w-8 h-8 text-blue-500" />,
-      items: [
-        t("smartItems.automation"),
-        t("smartItems.security"),
-        t("smartItems.media"),
-        t("smartItems.network"),
-      ],
-      image: smartp,
-      color: "bg-blue-500",
-      path: "/services/smart-buildings",
-    },
+    // {
+    //   title: t("smartBuildingsnew"),
+    //   icon: <Building className="w-8 h-8 text-blue-500" />,
+    //   items: [
+    //     t("smartItems.automation"),
+    //     t("smartItems.security"),
+    //     t("smartItems.media"),
+    //     t("smartItems.network"),
+    //   ],
+    //   image: smartp,
+    //   color: "bg-blue-500",
+    //   path: "/services/smart-buildings",
+    // },
     {
       title: t("energySavingsnew"),
       icon: <Leaf className="w-8 h-8 text-green-500" />,
@@ -74,7 +74,7 @@ const ServicesSection = () => {
           {t("servicesTitle")}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
