@@ -20,6 +20,7 @@ import Picture8 from '../assets/Picture8.png'
 import p1 from '../assets/p1.png'
 import p2 from '../assets/p2.png'
 import p3 from '../assets/p3.png'
+import p4 from '../assets/images.png'
 
 
 
@@ -133,4 +134,5 @@ const cards = [
   { url: p1, id: 17},
   { url: p2, id: 18},
   { url: p3, id: 19},
+  { url: p4, id: 20},
 ];

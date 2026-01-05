@@ -7,7 +7,11 @@ import { FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
-
+const phoneNumbers = [
+  "+20-1276196600",
+  "+20-1281958866",
+  "+20-1202426742",
+];
   return (
     <footer className="bg-maincolor text-white py-20 font-sans  relative overflow-hidden" dir={isRTL ? "rtl" : "ltr"}>
       {/* ديكورات خلفية */}
@@ -60,9 +64,15 @@ const Footer = () => {
               <div className="grid grid-cols-1 gap-4">
                 <div className="p-4 rounded-3xl bg-white/5 border border-white/5">
                   <p className="text-[10px] text-secendcolor font-black uppercase mb-1 tracking-wider">{t("footer.sales")}</p>
-                  <p className="text-sm font-semibold">+20 1276196600</p>
-                  <p className="text-sm font-semibold">+20 1281958866 </p>
-                  <p className="text-sm font-semibold">+20 1202426742</p>
+
+    
+<div className={isRTL ? "text-right" : "text-left"}>
+  {phoneNumbers.map((num, index) => (
+    <p key={index} className="text-sm font-semibold">
+      {isRTL ? num.replace("+", "") + "+" : num}
+    </p>
+  ))}
+</div>
                 </div>
               
               </div>

@@ -246,7 +246,7 @@ i18n
     "info": {
       "sectionTitle": "Contact Information",
       "locationTitle": "Our Location",
-      "locationDesc": "20th St. behind Green Plaza, Green Towers, Tower 17, Floor 11, Smouha, Alexandria, Egypt",
+      "locationDesc": "20th St. behind Green Plaza, Green Towers, Tower 17, Floor 2, Smouha, Alexandria, Egypt",
       "callUsTitle": "Call Us",
       "sales": "Sales:",
       "support": "Support:",
@@ -722,7 +722,7 @@ SuccessfulInstallations: "تركيبات ناجحة",
     "info": {
       "sectionTitle": "معلومات الاتصال",
       "locationTitle": "موقعنا",
-      "locationDesc": "الشارع 20 خلف جرين بلازا، الأبراج الخضراء، البرج 17، الطابق 11، سموحة، الإسكندرية، مصر",
+      "locationDesc": "الشارع 20 خلف جرين بلازا، الأبراج الخضراء، البرج 17، الطابق الثاني ،سموحة، الإسكندرية، مصر",
       "callUsTitle": "اتصل بنا",
       "sales": "المبيعات:",
       "support": "الدعم:",
