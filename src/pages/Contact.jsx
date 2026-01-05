@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { t, i18n } = useTranslation();
+    const isRTL = i18n.language === "ar";
+
 const lang=i18n.language==="ar"
   useEffect(() => {
     AOS.init({
@@ -14,7 +16,11 @@ const lang=i18n.language==="ar"
       once: true,
     });
   }, []);
-
+const phoneNumbers = [
+  "+20-1276196600",
+  "+20-1281958866",
+  "+20-1202426742",
+];
   return (
     <div className="min-h-screen bg-white relative" dir={lang?"rtl":"ltr"}>
       {/* Hero Section */}
@@ -67,12 +73,14 @@ const lang=i18n.language==="ar"
                 <div>
                   <h4 className="font-bold text-maincolor text-lg mb-1">{t("contact.info.callUsTitle")}</h4>
                   <div className="text-gray-600 space-y-1">
-                    <p>
-                      <span className="font-semibold text-maincolor/70">{t("contact.info.sales")}</span> +20 127 619 6600
-                    </p>
-                    <p>
-                      <span className="font-semibold text-maincolor/70">{t("contact.info.support")}</span> +20 155 154 6472
-                    </p>
+                  <div className={isRTL ? "text-right" : "text-left"}>
+  {phoneNumbers.map((num, index) => (
+    <p key={index} className="text-sm font-semibold">
+      {isRTL ? num.replace("+", "") + "+" : num}
+    </p>
+  ))}
+</div>
+                  
                   </div>
                 </div>
               </div>

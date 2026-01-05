@@ -7,7 +7,7 @@ import {
   Zap,
   Building2,
 } from "lucide-react";
-import pppd from "../assets/pppd.pdf";
+import pppd from "../assets/pppd2.pdf";
 import { X, ChevronRight, ChevronLeft } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
