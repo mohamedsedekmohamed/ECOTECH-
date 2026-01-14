@@ -23,11 +23,10 @@ const serviceLinks = [
   { path: "/services/energy-storage", label: t("energyStorag"), icon: BatteryCharging },
 ];
 
-
  const navItems = [
   { path: "/", label: t("home"), icon: Home },
   { path: "/about", label: t("Aboutt"), icon: Info },
-  { path: "/projects", label: t("projects"), icon: AiOutlineFundProjectionScreen },
+  { path: "/projects", label: t("Portfolio"), icon: AiOutlineFundProjectionScreen },
   { path: "/careers", label: t("careerss"), icon: RiProfileLine },
   { path: "/contact", label: t("contacts"), icon: Mail },
 ];
@@ -66,7 +65,7 @@ const serviceLinks = [
             ))}
 
             {/* Dropdown Services */}
-            <li className="relative group" onClick={() => setServicesOpen(p=>!p)} >
+            <li className="relative group" onClick={() => setServicesOpen(p=>!p)}  data-aos="fade-up" data-aos-delay={navItems.length * 135}>
               <button
                 className={`flex items-center gap-2 rounded-md px-2 py-2 text-base font-semibold transition-all duration-300 ${
                   isServiceActive ? "bg-maincolor text-white shadow-md" : "text-maincolor hover:bg-secendcolor/20"

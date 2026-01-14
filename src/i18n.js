@@ -8,6 +8,7 @@ i18n
     resources: {
       en: {
         translation: {
+          Portfolio: "Portfolio",
           "footerlocation": "  20th St. behind Green Plaza, Green Towers, Tower 21, Floor 2, Smouha, Alexandria, Egypt.",
           OurSolarLegacy: "Our Solar Legacy",
            Deliveringclean:"Delivering clean energy solutions across Egypt with precision and innovation.",
@@ -246,7 +247,7 @@ i18n
     "info": {
       "sectionTitle": "Contact Information",
       "locationTitle": "Our Location",
-      "locationDesc": "20th St. behind Green Plaza, Green Towers, Tower 17, Floor 2, Smouha, Alexandria, Egypt",
+      "locationDesc": "20th St. behind Green Plaza, Green Towers, Tower 21, Floor 2, Smouha, Alexandria, Egypt",
       "callUsTitle": "Call Us",
       "sales": "Sales:",
       "support": "Support:",
@@ -524,6 +525,7 @@ i18n
       },
       ar: {
         translation: {
+          Portfolio: "سابقة الأعمال",
           "footerlocation":"شارع 20 خلف جرين بلازا، أبراج جرين، البرج 21، الطابق 2، سموحة، الإسكندرية، مصر.",
          
 OurSolarLegacy: "إرثنا في الطاقة الشمسية",
@@ -722,7 +724,7 @@ SuccessfulInstallations: "تركيبات ناجحة",
     "info": {
       "sectionTitle": "معلومات الاتصال",
       "locationTitle": "موقعنا",
-      "locationDesc": "الشارع 20 خلف جرين بلازا، الأبراج الخضراء، البرج 17، الطابق الثاني ،سموحة، الإسكندرية، مصر",
+      "locationDesc": "الشارع 20 خلف جرين بلازا، الأبراج الخضراء، البرج 21، الطابق الثاني ،سموحة، الإسكندرية، مصر",
       "callUsTitle": "اتصل بنا",
       "sales": "المبيعات:",
       "support": "الدعم:",
