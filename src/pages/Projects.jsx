@@ -366,7 +366,7 @@ const [selectedProject, setSelectedProject] = useState(null);
             <div className="absolute -left-[17px] sm:-left-[26px] top-0 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white border-4 border-slate-50 shadow-sm flex items-center justify-center">
               <PiSolarPanelBold size={16} className="text-secendcolor sm:w-[20px]" />
             </div>
-            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">Project Name</h4>
+            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">{t("Project Name")}</h4>
             <p className="text-lg sm:text-xl font-extrabold text-[#004a61] leading-tight">{selectedProject.title}</p>
           </div>
 
@@ -375,7 +375,7 @@ const [selectedProject, setSelectedProject] = useState(null);
             <div className="absolute -left-[17px] sm:-left-[26px] top-0 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white border-4 border-slate-50 shadow-sm flex items-center justify-center">
               <HiUser size={16} className="text-maincolor sm:w-[20px]" />
             </div>
-            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">Client</h4>
+            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">{t("Client")}</h4>
             <p className="text-lg sm:text-xl font-extrabold text-red-700 leading-tight">{selectedProject.client}</p>
           </div>
 
@@ -384,7 +384,7 @@ const [selectedProject, setSelectedProject] = useState(null);
             <div className="absolute -left-[17px] sm:-left-[26px] top-0 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white border-4 border-slate-50 shadow-sm flex items-center justify-center">
               <MapPin size={16} className="text-therrtcolor sm:w-[20px]" />
             </div>
-            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">Location</h4>
+            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">{t("Location")}</h4>
             <p className="text-base sm:text-lg font-bold text-slate-700 leading-tight">{selectedProject.location}</p>
           </div>
 
@@ -393,7 +393,7 @@ const [selectedProject, setSelectedProject] = useState(null);
             <div className="absolute -left-[17px] sm:-left-[26px] top-0 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white border-4 border-slate-50 shadow-sm flex items-center justify-center">
               <AiOutlineAim size={16} className="text-black sm:w-[20px]" />
             </div>
-            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">Scope of Work</h4>
+            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">{t("Scope of Work")}</h4>
             <p className="text-base sm:text-lg font-bold text-slate-700 leading-tight">{selectedProject.scope}</p>
           </div>
 
@@ -402,7 +402,7 @@ const [selectedProject, setSelectedProject] = useState(null);
             <div className="absolute -left-[17px] sm:-left-[26px] top-0 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white border-4 border-slate-50 shadow-sm flex items-center justify-center">
               <Zap size={16} className="text-maincolor sm:w-[20px]" />
             </div>
-            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">Annual Generation</h4>
+            <h4 className="text-slate-500 font-bold text-[10px] sm:text-sm uppercase tracking-widest">{t("AnnualGeneration")}</h4>
             <p className="text-xl sm:text-2xl font-black text-[#004a61] leading-tight">{selectedProject.annualGen}</p>
           </div>
 
@@ -412,7 +412,7 @@ const [selectedProject, setSelectedProject] = useState(null);
         onClick={() => setSelectedProject(null)}
         className="absolute bottom-4 right-4 z-50 bg-red-600 backdrop-blur-sm hover:bg-red-500 hover:text-white text-white rounded-[6px] p-2 shadow-lg transition-all"
       >
-Close
+{t("Close")}
       </button>
 
     </div>

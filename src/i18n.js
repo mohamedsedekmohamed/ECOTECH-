@@ -8,6 +8,7 @@ i18n
     resources: {
       en: {
         translation: {
+          
           Portfolio: "Portfolio",
           "footerlocation": "  20th St. behind Green Plaza, Green Towers, Tower 21, Floor 2, Smouha, Alexandria, Egypt.",
           OurSolarLegacy: "Our Solar Legacy",
@@ -401,11 +402,11 @@ i18n
       "title2": "is Now.",
       "desc1": {
         "part1": "Some Egyptian business owners may think the initial costs are too high.",
-        "highlight": "there’s never been a better time to switch."
+        "highlight": "There’s never been a better time to switch."
       },
       "desc2": {
         "part1": "Today’s solar technology is more efficient than ever, and many government initiatives are available to offset installation costs. With Ecotech, you’ll see a",
-        "highlight": "return on your investment quickly",
+        "highlight": " return on your investment quickly",
         "part2": ", no matter your industry."
       },
       "warranty": {
@@ -516,15 +517,28 @@ i18n
 
     },
    
-
-
+Close: "Close",
+AnnualGeneration: "Annual Generation",
+"Scope of Work": "Scope of Work",
+Location: "Location",
+Client: "Client",
+"Project Name": "Project Name",
+"View Details": "View Details",
  
   }
   
+
         }
       },
       ar: {
         translation: {
+          Close: "اغلاق",
+AnnualGeneration: "التوليد السنوي",
+"Scope of Work": "نطاق العمل",
+Location: "الموقع",
+Client: "العميل",
+"Project Name": "اسم العملية",
+"View Details": "عرض التفاصيل",
           Portfolio: "سابقة الأعمال",
           "footerlocation":"شارع 20 خلف جرين بلازا، أبراج جرين، البرج 21، الطابق 2، سموحة، الإسكندرية، مصر.",
          
@@ -724,7 +738,7 @@ SuccessfulInstallations: "تركيبات ناجحة",
     "info": {
       "sectionTitle": "معلومات الاتصال",
       "locationTitle": "موقعنا",
-      "locationDesc": "الشارع 20 خلف جرين بلازا، الأبراج الخضراء، البرج 21، الطابق الثاني ،سموحة، الإسكندرية، مصر",
+      "locationDesc": " تواصل معنا الموقع شارع 20 خلف جرين بلازا، الأبراج الخضراء، البرج 21، الطابق الثاني ،سموحة، الإسكندرية، مصر",
       "callUsTitle": "اتصل بنا",
       "sales": "المبيعات:",
       "support": "الدعم:",
@@ -948,7 +962,7 @@ SuccessfulInstallations: "تركيبات ناجحة",
       "desc": "أن نكون أول علامة تجارية مصرية تغير نظرة الناس للطاقة المتجددة وتجعلها جزءًا من حياتهم اليومية."
     },
     "mission": {
-      "title": "مهمتنا",
+      "title": "أهدافنا",
       "desc": "نبني مستقبلًا نظيفًا للطاقة من خلال تقديم حلول طاقة شمسية ذكية وموثوقة."
     },
     "certification": {
