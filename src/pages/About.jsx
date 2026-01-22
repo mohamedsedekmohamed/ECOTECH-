@@ -293,6 +293,8 @@ const navigate = useNavigate();
         <div className="container mx-auto px-4">
           <div className="text-center mb-20" data-aos="zoom-out">
             <h2 className="text-4xl md:text-5xl font-black mb-6">
+                {t("about.whoWeServe.title")}
+
             </h2>
             <div className="w-32 h-2 bg-secendcolor mx-auto rounded-full"></div>
           </div>
