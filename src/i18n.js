@@ -388,6 +388,9 @@ i18n
         "title": "Hybrid Solar System",
         "description": "The best of both worlds by building a solar system that only uses traditional utility power as a backup. Rather than funneling excess energy back, you store it."
       }
+      ,
+      Application:"Application",
+      Website:"Website",
     }
   },
   "about": {
@@ -533,6 +536,8 @@ Client: "Client",
       ar: {
         translation: {
           Close: "اغلاق",
+          Website:"موقع الكتروني",
+          Application:"تطبيق",
 AnnualGeneration: "التوليد السنوي",
 "Scope of Work": "نطاق العمل",
 Location: "الموقع",

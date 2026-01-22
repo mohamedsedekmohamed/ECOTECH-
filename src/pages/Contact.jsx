@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Send, Clock } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
-
+import cardss from  '../assets/business/cardss.png'
 const Contact = () => {
   const { t, i18n } = useTranslation();
     const isRTL = i18n.language === "ar";
@@ -24,26 +24,45 @@ const phoneNumbers = [
   return (
     <div className="min-h-screen bg-white relative" dir={lang?"rtl":"ltr"}>
       {/* Hero Section */}
-      <section className="bg-maincolor py-20 text-white relative overflow-hidden">
-         <div className="absolute inset-0 z-0">
+   <section className="relative bg-maincolor py-24 md:py-32 text-white overflow-hidden">
+
+  {/* Floating Shapes */}
+  <div className="absolute inset-0 z-0 pointer-events-none">
     <span className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full animate-float"></span>
     <span className="absolute bottom-20 right-20 w-48 h-48 bg-white/10 rounded-full animate-float-delay"></span>
     <span className="absolute top-1/2 left-1/3 w-24 h-24 bg-white/10 rounded-full animate-float-slow"></span>
     <span className="absolute bottom-10 left-20 w-16 h-16 bg-white/15 rounded-full animate-float"></span>
   </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div data-aos="fade-up">
-            <h1 className="text-5xl md:text-7xl font-black mb-6">
-              {t("contact.hero.title")}
-            </h1>
-            <p className="text-xl opacity-80 max-w-2xl leading-relaxed">
-              {t("contact.hero.subtitle")}
-            </p>
-          </div>
-        </div>
-        <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-therrtcolor/10 rounded-full blur-3xl"></div>
-      </section>
+  {/* Glow */}
+  <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] bg-therrtcolor/20 rounded-full blur-3xl z-0"></div>
+
+  <div className="container mx-auto px-4 relative z-10">
+    <div className="flex flex-col lg:flex-row items-center gap-16">
+
+      {/* Text */}
+      <div data-aos="fade-up" className="max-w-2xl text-center lg:text-left">
+        <h1 className="text-4xl md:text-6xl xl:text-7xl font-black mb-6 leading-tight">
+          {t("contact.hero.title")}
+        </h1>
+        <p className="text-lg md:text-xl opacity-80 leading-relaxed">
+          {t("contact.hero.subtitle")}
+        </p>
+      </div>
+
+      {/* Image */}
+      <div data-aos="fade-left" className="relative w-full lg:w-1/2 flex justify-center">
+        <img
+          src={cardss}
+          alt="Contact Illustration"
+          className="max-w-md w-full rounded-3xl shadow-2xl shadow-black/20"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
       <section className="py-24 container mx-auto px-4">
         <div className="grid lg:grid-cols-12 gap-16">

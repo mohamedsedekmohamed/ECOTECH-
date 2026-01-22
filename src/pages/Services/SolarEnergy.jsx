@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import SolarTypes from '../../components/SolarTypes';
 import SolarSteps from '../../components/SolarSteps';
 import Solar from '../../assets/SolarEnergyhd.webp';
-
 const SolarEnergy = () => {
   const { t } = useTranslation();
 

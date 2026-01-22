@@ -4,7 +4,7 @@ import { useTranslation, Trans } from 'react-i18next';
 import { BatteryMedium, Leaf, Zap, Database, Shield } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import enr from '../../assets/EnergyStorage.webp';
-
+import MockUp from '../../assets/business/MockUp.png'
 const EnergyStorage = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
@@ -120,21 +120,23 @@ const EnergyStorage = () => {
                  style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} 
             />
             
-            <div className={`relative z-10 text-center ${isRTL ? "lg:text-right" : "lg:text-left"}`}>
+            <div className={`relative z-10 text-center flex  flex-col px-5  ${isRTL ? "lg:justify-start" : "lg:justify-end" } `}>
               <h4 className="text-3xl md:text-4xl font-black mb-4 uppercase italic tracking-tighter">
                 {t("energyStorage.cta.title")} <span className="text-secendcolor text-not-italic">{t("energyStorage.cta.highlight")}</span>
               </h4>
-              <p className="text-blue-100/70 text-lg max-w-xl font-light">
+              <p className="text-blue-100/70 text-lg  font-light">
                 {t("energyStorage.cta.description")}
               </p>
-            </div>
-
             <button 
               onClick={() => navigate('/contact')} 
-              className="relative z-10 bg-secendcolor text-maincolor px-12 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-white hover:scale-105 transition-all shadow-xl"
+              className="relative z-10 bg-secendcolor mt-10 text-maincolor px-12 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-white hover:scale-105 transition-all shadow-xl"
             >
               {t("energyStorage.cta.button")}
             </button>
+            </div>
+ <img src={MockUp} alt="MockUp" className="w-full h-full lg:w-1/2 lg:h-1/2 
+ rounded-2xl
+ " />
           </motion.div>
         </div>
       </section>

@@ -10,6 +10,7 @@ import {
   CheckCircle2 
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import man from '../assets/business/man.png'
 
 const SolarSteps = () => {
   const { t, i18n } = useTranslation();
@@ -57,24 +58,52 @@ const SolarSteps = () => {
   return (
     <section className="py-24 bg-white overflow-hidden" dir={isRTL ? "rtl" : "ltr"}>
       <div className="container mx-auto px-6">
-        
-        {/* Header */}
-        <div className={`max-w-3xl mb-20 ${isRTL ? "text-right" : "text-left"}`}>
-          <motion.h2 
-            initial={{ opacity: 0, x: isRTL ? 50 : -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="text-4xl md:text-6xl font-black text-maincolor mb-6 uppercase tracking-tighter"
-          >
-            {t("solarSteps.title")} <br /> 
-            <span className="text-therrtcolor">{t("solarSteps.highlight")}</span>
-          </motion.h2>
-          <p className="text-slate-600 text-lg leading-relaxed font-medium">
-            {t("solarSteps.description")}
-          </p>
-        </div>
+     
+     <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+
+  {/* Text Content */}
+  <div className={`max-w-2xl ${isRTL ? "text-right" : "text-left"}`}>
+    <motion.h2
+      initial={{ opacity: 0, x: isRTL ? 60 : -60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.7 }}
+      className="text-4xl md:text-6xl font-black text-maincolor mb-6 uppercase tracking-tight leading-tight"
+    >
+      {t("solarSteps.title")} <br />
+      <span className="text-therrtcolor">
+        {t("solarSteps.highlight")}
+      </span>
+    </motion.h2>
+
+    <motion.p
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2, duration: 0.6 }}
+      className="text-slate-600 text-lg leading-relaxed font-medium"
+    >
+      {t("solarSteps.description")}
+    </motion.p>
+  </div>
+
+  {/* Image */}
+  <motion.div
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.6 }}
+    className="w-full lg:w-1/2 flex justify-center"
+  >
+    <img
+      src={man}
+      alt="Solar Steps"
+      className="max-w-md w-full rounded-3xl shadow-xl shadow-maincolor/30 hover:scale-105 transition-transform duration-500"
+    />
+  </motion.div>
+
+</div>
+
 
         {/* Steps Grid */}
-        <div className="relative">
+        <div className="relative my-3">
           {/* الخط الواصل - Desktop */}
           <div className="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-slate-100 -translate-y-1/2 z-0" />
 

@@ -7,7 +7,8 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
-
+import idpic from '../assets/business/id.png'
+import cap from '../assets/business/cap.jpg'
 const Careers = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
@@ -38,11 +39,25 @@ const Careers = () => {
       <div className="container mx-auto px-4 ">
         
         {/* Header */}
-        <div className="text-center mb-12" data-aos="fade-down">
-          <h1 className="text-4xl font-black text-maincolor mb-4">{t("careers.header.title")}</h1>
-          <p className="text-therrtcolor font-medium">{t("careers.header.subtitle")}</p>
-          <div className="w-24 h-1 bg-secendcolor mx-auto mt-4 rounded-full"></div>
-        </div>
+      <div className="flex flex-col md:flex-row justify-center gap-10 items-center mb-12" data-aos="fade-down">
+
+  <div >
+
+  <h1 className="text-4xl font-black text-maincolor mb-4">{t("careers.header.title")}</h1>
+  <p className="text-therrtcolor font-medium">{t("careers.header.subtitle")}</p>
+  <div className="w-24 h-1 bg-secendcolor mx-auto mt-4 rounded-full"></div>
+  </div>
+
+  {/* الصور على اليمين واليسار */}
+ 
+  <img 
+    src={cap} 
+    alt="Cap" 
+    className="w-50  h-40  shadow-lg rounded-2xl object-cover transition-transform duration-500 hover:scale-105" // يمين مائلة مع ظل وحركة
+  />
+
+</div>
+
 
         {/* Form Container */}
         <div className="bg-white shadow-2xl rounded-[2.5rem] p-8 md:p-12 border border-gray-100" data-aos="zoom-in">

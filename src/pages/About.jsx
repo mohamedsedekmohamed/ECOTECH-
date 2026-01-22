@@ -15,6 +15,9 @@ import { useTranslation } from "react-i18next";
 import ValuesSection from "../components/ValuesSection";
 // Schools & Academies
 import {useNavigate} from 'react-router-dom';
+import app from '../assets/business/app.png'
+import lab from '../assets/business/lab.png'
+import { motion } from 'framer-motion';
 
 const About = () => {
     const { t, i18n } = useTranslation();
@@ -253,14 +256,43 @@ const navigate = useNavigate();
     </div>
   </div>
 </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20 px-4 md:px-16">
 
+  {/* بطاقة 1 */}
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    className="relative rounded-3xl overflow-hidden shadow-2xl shadow-maincolor/30 hover:scale-105 transition-transform duration-500"
+  >
+    <img src={lab} alt="Lab" className="w-full h-96 object-cover" />
+    <div className="absolute bottom-0 left-0 w-full bg-black/40 p-4">
+      <h3 className="text-white text-xl md:text-2xl font-bold">
+ </h3>
+    </div>
+  </motion.div>
+
+  {/* بطاقة 2 */}
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.2 }}
+    className="relative rounded-3xl overflow-hidden shadow-2xl shadow-maincolor/30 hover:scale-105 transition-transform duration-500"
+  >
+    <img src={app} alt="App" className="w-full h-96 object-cover" />
+    <div className="absolute bottom-0 left-0 w-full bg-black/40 p-4">
+      <h3 className="text-white text-xl md:text-2xl font-bold">
+      </h3>
+    </div>
+  </motion.div>
+
+</div>
       </section>
       {/* Grid Projects Section */}
       <section className="py-24 bg-maincolor text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20" data-aos="zoom-out">
             <h2 className="text-4xl md:text-5xl font-black mb-6">
-  {t("about.whoWeServe.title")}
             </h2>
             <div className="w-32 h-2 bg-secendcolor mx-auto rounded-full"></div>
           </div>

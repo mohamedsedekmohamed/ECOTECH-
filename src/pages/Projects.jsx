@@ -3,7 +3,8 @@ import { Award, Building2, MapPin, Zap, Activity, ShieldCheck, ArrowUpRight } fr
 import { useTranslation } from 'react-i18next'; // افترضت أنك تستخدم i18n بناءً على كودك
 import { PiSolarPanelBold } from "react-icons/pi";
 import { HiUser } from "react-icons/hi";
-
+import { motion } from 'framer-motion';
+import cvv from '../assets/business/cvv.png'
 // استيراد الصور (نفس الصور التي قدمتها)
 import taybahAcad from "../assets/project/Taybah Academy.jpg";
 import taybahInt from "../assets/project/Taybah International School.jpg";
@@ -29,7 +30,7 @@ import villa2 from "../assets/project/Villa Complex 2.png";
 import alexElec from "../assets/project/agmye.jpg";
 import { useLocation } from 'react-router-dom';
 import { AiOutlineAim } from "react-icons/ai";
-
+import profile from '../assets/business/004.png'
 const Projects = () => {
   const { t } = useTranslation();
 const { hash } = useLocation();
@@ -286,54 +287,112 @@ const [selectedProject, setSelectedProject] = useState(null);
 
   return (
 <div className="bg-[#fcfcfc] py-20 px-4 sm:px-6 lg:px-8 min-h-screen">
-      <div className="max-w-7xl mx-auto">
-        
-        {/* Hero Section */}
-        <div className="text-center mb-24 relative">
-          <h1 className="text-5xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight">
-             <span style={{ color: colors.main }} className="italic">{t("OurSolarLegacy")}</span> 
-          </h1>
-          <p className="text-slate-500 max-w-2xl mx-auto text-lg">{t("Deliveringclean")}</p>
-        </div>
+    <div className="mx-auto">
 
-        {projectsData.map((section, idx) => (
-          <div key={idx} id={section.id} className="mb-32 scroll-mt-24">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 border-l-8 pl-6" style={{ borderColor: colors.secondary }}>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 uppercase">{section.category}</h2>
+  {/* Hero Section */}
+  <div className="relative text-center mb-32 flex flex-col items-center">
+
+    {/* Decorative Background Circle */}
+    <div className="absolute -top-20 -left-20 w-72 h-72 bg-main/10 rounded-full blur-3xl z-0"></div>
+    <div className="absolute -bottom-10 right-10 w-96 h-96 bg-therrtcolor/10 rounded-full blur-3xl z-0"></div>
+
+    {/* Text */}
+    <div className="relative z-10 max-w-3xl px-4">
+      <motion.h1
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-6"
+      >
+        <span style={{ color: colors.main }} className="italic">
+          {t("OurSolarLegacy")}
+        </span>
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="text-slate-500 text-lg md:text-xl leading-relaxed"
+      >
+        {t("Deliveringclean")}
+      </motion.p>
+    </div>
+
+    {/* الصور الكبيرة */}
+    <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-16 w-full px-4 md:px-16">
+
+      {/* بطاقة 1 */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="relative w-full md:w-1/2 rounded-3xl overflow-hidden shadow-2xl shadow-maincolor/30 hover:scale-105 transition-transform duration-500"
+      >
+        <img src={profile} alt="Profile" className="w-full h-[500px] md:h-[600px] object-cover" />
+        <div className="absolute bottom-0 left-0 w-full bg-black/40 p-4">
+          <h3 className="text-white text-2xl md:text-3xl font-bold text-center">
+          </h3>
+        </div>
+      </motion.div>
+
+      {/* بطاقة 2 */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="relative w-full md:w-1/2 rounded-3xl overflow-hidden shadow-2xl shadow-maincolor/30 hover:scale-105 transition-transform duration-500"
+      >
+        <img src={cvv} alt="CVV" className="w-full h-[500px] md:h-[600px] object-cover" />
+        <div className="absolute bottom-0 left-0 w-full bg-black/40 p-4">
+          <h3 className="text-white text-2xl md:text-3xl font-bold text-center">
+          </h3>
+        </div>
+      </motion.div>
+
+    </div>
+
+  </div>
+
+  {/* Projects Section */}
+  {projectsData.map((section, idx) => (
+    <div key={idx} id={section.id} className="mb-32 scroll-mt-24">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 border-l-8 pl-6" style={{ borderColor: colors.secondary }}>
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-800 uppercase">{section.category}</h2>
+      </div>
+
+      {/* Projects Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {section.items.map((project, pIdx) => (
+          <div 
+            key={pIdx} 
+            onClick={() => setSelectedProject(project)}
+            className="group cursor-pointer bg-white rounded-[2.5rem] shadow-[0_15px_50px_-15px_rgba(0,0,0,0.05)] hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col h-full border border-slate-50"
+          >
+            <div className="relative h-72 overflow-hidden">
+              <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div className="absolute bottom-6 left-8 right-8 text-white">
+                <div className="flex items-center gap-2 mb-2 opacity-80 uppercase text-[10px] font-bold tracking-[0.2em]" style={{ color: colors.secondary }}>
+                  <MapPin size={14} /> {project.location}
+                </div>
+                <h3 className="text-xl font-bold leading-tight group-hover:translate-x-2 transition-transform duration-300">{project.title}</h3>
+              </div>
             </div>
 
-            {/* Projects Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {section.items.map((project, pIdx) => (
-                <div 
-                  key={pIdx} 
-                  // 2. جعل الكارت قابل للضغط لفتح التفاصيل
-                  onClick={() => setSelectedProject(project)}
-                  className="group cursor-pointer bg-white rounded-[2.5rem] shadow-[0_15px_50px_-15px_rgba(0,0,0,0.05)] hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col h-full border border-slate-50"
-                >
-                  <div className="relative h-72 overflow-hidden">
-                    <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    <div className="absolute bottom-6 left-8 right-8 text-white">
-                      <div className="flex items-center gap-2 mb-2 opacity-80 uppercase text-[10px] font-bold tracking-[0.2em]" style={{ color: colors.secondary }}>
-                        <MapPin size={14} /> {project.location}
-                      </div>
-                      <h3 className="text-xl font-bold leading-tight group-hover:translate-x-2 transition-transform duration-300">{project.title}</h3>
-                    </div>
-                  </div>
-
-                  {/* 3. عرض زر بسيط بدلاً من كل التفاصيل */}
-                  <div className="p-6 text-center">
-                    <button className="text-sm font-bold flex items-center justify-center gap-2 mx-auto transition-colors" style={{ color: colors.main }}>
-                      {t("View Details")} <ArrowUpRight size={16} />
-                    </button>
-                  </div>
-                </div>
-              ))}
+            <div className="p-6 text-center">
+              <button className="text-sm font-bold flex items-center justify-center gap-2 mx-auto transition-colors" style={{ color: colors.main }}>
+                {t("View Details")} <ArrowUpRight size={16} />
+              </button>
             </div>
           </div>
         ))}
       </div>
+    </div>
+  ))}
+
+</div>
+
 
    {selectedProject && (
   <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 bg-slate-900/80 backdrop-blur-md animate-in fade-in duration-300">
