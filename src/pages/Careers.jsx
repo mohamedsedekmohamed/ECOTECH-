@@ -39,7 +39,9 @@ const Careers = () => {
       <div className="container mx-auto px-4 ">
         
         {/* Header */}
-      <div className="flex flex-col md:flex-row justify-center gap-10 items-center mb-12" data-aos="fade-down">
+      <div className="flex flex-col md:flex-row
+       justify-center gap-10 items-center mb-12"
+        data-aos="fade-down">
 
   <div >
 
