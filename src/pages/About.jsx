@@ -18,7 +18,6 @@ import {useNavigate} from 'react-router-dom';
 import app from '../assets/business/app.png'
 import lab from '../assets/business/lab.png'
 import { motion } from 'framer-motion';
-
 const About = () => {
     const { t, i18n } = useTranslation();
 
