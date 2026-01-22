@@ -7,7 +7,6 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
-import idpic from '../assets/business/id.png'
 import cap from '../assets/business/cap.jpg'
 const Careers = () => {
   const { t, i18n } = useTranslation();
