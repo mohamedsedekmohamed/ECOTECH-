@@ -4,7 +4,7 @@ import { FiZap, FiGlobe, FiSmile } from "react-icons/fi";
 import OIP from "../assets/OIP.webp";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+import banner from '../assets/business/banner.png'
 
 const EssenceSection = () => {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ const EssenceSection = () => {
               className="relative z-20 overflow-hidden rounded-[3rem] shadow-2xl border-8 border-white w-4/5 h-[400px]"
             >
               <img 
-                src={OIP}
+                src={banner}
                 alt="Solar Innovation" 
                 className="w-full h-full "
               />
