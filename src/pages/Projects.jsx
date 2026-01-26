@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'; // افترضت أنك تستخ�
 import { PiSolarPanelBold } from "react-icons/pi";
 import { HiUser } from "react-icons/hi";
 import { motion } from 'framer-motion';
-import cvv from '../assets/business/cvv.png'
+import cvv from '../assets/business/cvv.jpeg'
 // استيراد الصور (نفس الصور التي قدمتها)
 import taybahAcad from "../assets/project/Taybah Academy.jpg";
 import taybahInt from "../assets/project/Taybah International School.jpg";
@@ -30,7 +30,7 @@ import villa2 from "../assets/project/Villa Complex 2.png";
 import alexElec from "../assets/project/agmye.jpg";
 import { useLocation } from 'react-router-dom';
 import { AiOutlineAim } from "react-icons/ai";
-import profile from '../assets/business/004.png'
+import profile from '../assets/business/004.jpeg'
 const Projects = () => {
   const { t } = useTranslation();
 const { hash } = useLocation();

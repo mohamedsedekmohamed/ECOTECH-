@@ -4,7 +4,7 @@ import { useTranslation, Trans } from 'react-i18next';
 import { BatteryMedium, Leaf, Zap, Database, Shield } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import enr from '../../assets/EnergyStorage.webp';
-import MockUp from '../../assets/business/MockUp.png'
+import MockUp from '../../assets/business/MockUp.jpeg'
 const EnergyStorage = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();

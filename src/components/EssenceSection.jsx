@@ -4,7 +4,7 @@ import { FiZap, FiGlobe, FiSmile } from "react-icons/fi";
 import OIP from "../assets/OIP.webp";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import banner from '../assets/business/banner.png'
+import banner from '../assets/business/banner.jpeg'
 
 const EssenceSection = () => {
   const navigate = useNavigate();

@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Send, Clock } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
-import cardss from  '../assets/business/cardss.png'
+import cardss from  '../assets/business/cardss.jpeg'
 const Contact = () => {
   const { t, i18n } = useTranslation();
     const isRTL = i18n.language === "ar";

@@ -7,7 +7,7 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
-import cap from '../assets/business/cap.jpg'
+import cap from '../assets/business/cap.jpeg'
 const Careers = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";

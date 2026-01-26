@@ -10,7 +10,7 @@ import {
   CheckCircle2 
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import man from '../assets/business/man.png'
+import man from '../assets/business/man.jpeg'
 
 const SolarSteps = () => {
   const { t, i18n } = useTranslation();
