@@ -81,7 +81,7 @@ const HorizontalScrollCarousel = ({ isRTL }) => {
         transition={{
           repeat: Infinity,
           repeatType: "loop",
-          duration: 35,
+          duration: 45,
           ease: "linear",
         }}
         // هذا السطر يضمن أن الحاوية تبدأ من الطرف الصحيح عند التحميل
