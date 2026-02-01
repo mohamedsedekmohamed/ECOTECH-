@@ -18,6 +18,8 @@ import {useNavigate} from 'react-router-dom';
 import app from '../assets/business/app.jpeg'
 import lab from '../assets/business/lab.jpeg'
 import { motion } from 'framer-motion';
+import banner from '../assets/business/banner.jpeg'
+
 const About = () => {
     const { t, i18n } = useTranslation();
   const projects = [
@@ -199,7 +201,7 @@ const navigate = useNavigate();
         </div>
       </div>
     </div>
-<span className="block text-center mb-2">
+<span className="block text-center my-5 md:my-8 ">
   <a 
     href={pppd}  // ضع هنا رابط ملف الـ PDF
     target="_blank"            // يفتح في تاب جديدة
@@ -236,7 +238,7 @@ const navigate = useNavigate();
       </div>
 
       {/* بطاقة الابتكار */}
-      <div className="group bg-white border-2 border-maincolor p-10 rounded-[2rem] text-maincolor shadow-xl hover:scale-[1.02] transition-transform duration-500">
+      <div className="group bg-white border-2 border-maincolor  p-10 rounded-[2rem] text-maincolor shadow-xl hover:scale-[1.02] transition-transform duration-500">
         <div className="flex items-start gap-6">
           <div className="p-4 bg-maincolor/5 rounded-xl group-hover:bg-maincolor group-hover:text-white transition-all">
             <Lightbulb size={30} />
@@ -263,7 +265,7 @@ const navigate = useNavigate();
     transition={{ duration: 0.6 }}
     className="relative rounded-3xl overflow-hidden shadow-2xl shadow-maincolor/30 hover:scale-105 transition-transform duration-500"
   >
-    <img src={lab} alt="Lab" className="w-full h-96 object-cover" />
+    <img src={banner} alt="Lab" className="w-full h-96 object-cover" />
     <div className="absolute bottom-0 left-0 w-full bg-black/40 p-4">
       <h3 className="text-white text-xl md:text-2xl font-bold">
  </h3>
