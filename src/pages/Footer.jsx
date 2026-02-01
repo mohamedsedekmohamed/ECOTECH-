@@ -115,8 +115,13 @@ const phoneNumbers = [
         </div>
 
         <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="text-[10px] tracking-[0.4em] text-gray-400 uppercase font-medium">
-            © {new Date().getFullYear()} <span className="text-white font-black">ECOTECH</span>. All Rights Reserved.
+          <div className="text-[10px] tracking-[0.4em] text-gray-400 uppercase font-medium flex-col">
+<p>            © {new Date().getFullYear()} <span className="text-white font-black">ECOTECH</span>. All Rights Reserved.
+</p>           
+
+<p>
+    <span className="text-white font-black">Create by</span>.<a href='https://wegostation.com/' className='underline font-bold'> Wego Station</a>.
+  </p>
           </div>
           <div className="flex gap-10">
             {t("footer.links", { returnObjects: true }).map((link, index) => (
