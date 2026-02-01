@@ -20,7 +20,6 @@ import lab from '../assets/business/lab.jpeg'
 import { motion } from 'framer-motion';
 const About = () => {
     const { t, i18n } = useTranslation();
-
   const projects = [
     {
       id: "educational",
