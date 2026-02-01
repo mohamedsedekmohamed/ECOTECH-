@@ -58,9 +58,9 @@ const SolarTypes = () => {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-black text-white mt-4 mb-6"
           >
-            {t("solarTypes.titleMain")} <span className="text-therrtcolor">{t("solarTypes.titleHighlight")}</span>
+            {t("solarTypes.titleMain")} <span className="text-secendcolor">{t("solarTypes.titleHighlight")}</span>
           </motion.h2>
-          <div className="h-1.5 w-24 bg-secendcolor mx-auto rounded-full" />
+          <div className="h-1.5 w-24 bg-therrtcolor mx-auto rounded-full" />
         </div>
 
         {/* شبكة البطاقات */}
